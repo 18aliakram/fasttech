@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAST TECH Engineering Services | Home | Power Solutions Pakistan</title>
+    <meta name="description" content="FAST TECH Engineering Services - Industrial UPS, Batteries, Electrical Contracting & Power Solutions in Lahore, Pakistan since 2010.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff6a00',
+                        'primary-dark': '#e55f00',
+                        dark: '#0a0a0a',
+                        'dark-light': '#1a1a1a',
+                        'gray-50': '#fafafa',
+                        'gray-100': '#f5f5f5',
+                        'gray-200': '#e5e5e5',
+                        'gray-800': '#262626',
+                        'gray-900': '#171717',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased page-fade-in">
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="text-2xl font-bold tracking-tight">FAST TECH</div>
+        <div class="loader-line"></div>
+        <div class="text-sm text-gray-500">Powering Pakistan Since 2010</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center group">
+                    <img src="Logo/fast_logo.png" alt="FAST TECH Logo" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105 duration-300">
+                </a>
+
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
+                        Home
+                    </a>
+                    <a href="about.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
+                        About Us
+                    </a>
+                    
+                    <!-- Products Dropdown -->
+                    <div class="relative group/dropdown">
+                        <a href="products.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative flex items-center gap-1 py-2">
+                            Products
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover/dropdown:rotate-180"></i>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-150 rounded-lg shadow-xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 z-50 py-2">
+                            <a href="product-dry-gel-battery.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">DRY Gel Battery Solutions</a>
+                            <a href="product-lt-ht-overhead.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">LT-HT Over-Head Material</a>
+                            <a href="product-industrial-ups.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Industrial UPS Repairing</a>
+                            <a href="product-din-rail-power.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Din Rail Power Supply</a>
+                            <a href="product-panel-dbs-cable-trays.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Panel DBs & Cable Trays</a>
+                            <div class="border-t border-gray-100 my-1"></div>
+                            <a href="products.html" class="block px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/5 transition-colors">View All Products</a>
+                        </div>
+                    </div>
+
+                    <a href="services.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
+                        Services
+                    </a>
+                    <a href="contact.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- CTA & Mobile Toggle -->
+                <div class="flex items-center gap-4">
+                    <a href="tel:+923224462686" class="hidden md:flex btn-primary text-sm py-2.5 px-5">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        <span>Call Now</span>
+                    </a>
+                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-dark hover:text-primary transition-colors">
+                        <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-80 bg-white z-50 shadow-2xl p-8 lg:hidden">
+        <div class="flex justify-between items-center mb-12">
+            <span class="font-bold text-xl">Menu</span>
+            <button onclick="toggleMobileMenu()" class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="flex flex-col gap-6">
+            <a href="index.html" class="text-lg font-medium hover:text-primary transition-colors">Home</a>
+            <a href="about.html" class="text-lg font-medium hover:text-primary transition-colors">About Us</a>
+            
+            <!-- Mobile Products Collapsible -->
+            <div class="flex flex-col gap-2">
+                <button onclick="toggleMobileDropdown('mobile-products-submenu')" class="flex justify-between items-center text-lg font-medium text-left hover:text-primary transition-colors w-full">
+                    <span>Products</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200" id="mobile-products-arrow"></i>
+                </button>
+                <div id="mobile-products-submenu" class="hidden flex-col gap-3 pl-4 border-l border-gray-200 mt-2">
+                    <a href="product-dry-gel-battery.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">DRY Gel Battery Solutions</a>
+                    <a href="product-lt-ht-overhead.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">LT-HT Over-Head Material</a>
+                    <a href="product-industrial-ups.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Industrial UPS Repairing</a>
+                    <a href="product-din-rail-power.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Din Rail Power Supply</a>
+                    <a href="product-panel-dbs-cable-trays.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Panel DBs & Cable Trays</a>
+                    <a href="products.html" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors pt-1">All Products Catalog</a>
+                </div>
+            </div>
+
+            <a href="services.html" class="text-lg font-medium hover:text-primary transition-colors">Services</a>
+            <a href="contact.html" class="text-lg font-medium hover:text-primary transition-colors">Contact Us</a>
+        </div>
+        <div class="mt-12 pt-8 border-t border-gray-200">
+            <div class="text-sm text-gray-500 mb-2">Call us directly</div>
+            <a href="tel:+923224462686" class="text-xl font-bold text-primary">+92 322 4462686</a>
+        </div>
+    </div>
+    <div id="mobile-overlay" onclick="toggleMobileMenu()" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden backdrop-blur-sm"></div>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-gray-50">
+            <canvas id="energy-canvas"></canvas>
+            
+            <!-- Background Energy Lines SVG -->
+            <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" preserveAspectRatio="none">
+                <path class="energy-line" d="M0,100 Q400,50 800,150 T1600,100" />
+                <path class="energy-line" d="M0,200 Q400,150 800,250 T1600,200" style="animation-delay: -5s" />
+                <path class="energy-line" d="M0,300 Q400,250 800,350 T1600,300" style="animation-delay: -10s" />
+                <path class="energy-line" d="M0,400 Q400,350 800,450 T1600,400" style="animation-delay: -15s" />
+            </svg>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="stagger-container">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6 stagger-item">
+                            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            <span class="text-sm font-semibold text-primary uppercase tracking-wider">Established 2010</span>
+                        </div>
+                        
+                        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.1] mb-6 text-dark stagger-item">
+                            Powering Pakistan's <span class="gradient-text">Businesses</span> with Reliable Energy Solutions
+                        </h1>
+                        
+                        <p class="text-lg text-gray-600 mb-8 max-w-xl leading-relaxed stagger-item">
+                            From industrial UPS systems to large-scale power infrastructure, FAST TECH delivers performance, reliability, and long-term engineering support across Pakistan.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-4 stagger-item">
+                            <a href="contact.html" class="btn-primary text-base">
+                                <span>Get Free Consultation</span>
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </a>
+                            <a href="services.html" class="btn-outline text-base">
+                                <span>View Services</span>
+                                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+
+                        <div class="mt-12 flex items-center gap-8 stagger-item">
+                            <div>
+                                <div class="text-3xl font-bold text-dark counter-value" data-target="14">0</div>
+                                <div class="text-sm text-gray-500">Years Experience</div>
+                            </div>
+                            <div class="w-px h-12 bg-gray-300"></div>
+                            <div>
+                                <div class="text-3xl font-bold text-dark counter-value" data-target="500">0</div>
+                                <div class="text-sm text-gray-500">Projects Completed</div>
+                            </div>
+                            <div class="w-px h-12 bg-gray-300"></div>
+                            <div>
+                                <div class="text-3xl font-bold text-dark counter-value" data-target="100">0</div>
+                                <div class="text-sm text-gray-500">Industrial Clients</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative hidden lg:block stagger-item">
+                        <div class="relative z-10 bg-white p-4 rounded-2xl shadow-2xl electric-glow">
+                            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop" alt="Power Infrastructure" class="rounded-xl w-full object-cover h-[500px]">
+                            <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-gray-100">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                        <i data-lucide="zap" class="w-6 h-6 text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-dark">24/7 Support</div>
+                                        <div class="text-xs text-gray-500">Always Available</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Decorative Elements -->
+                        <div class="absolute -z-10 top-10 -right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+                        <div class="absolute -z-10 -bottom-10 -left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Bar -->
+        <section class="bg-dark text-white py-8 border-y border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="flex flex-col items-center gap-2">
+                        <i data-lucide="calendar" class="w-6 h-6 text-primary"></i>
+                        <span class="font-semibold">Established in 2010</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <i data-lucide="globe" class="w-6 h-6 text-primary"></i>
+                        <span class="font-semibold">Serving Nationwide</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <i data-lucide="users" class="w-6 h-6 text-primary"></i>
+                        <span class="font-semibold">Engineering Experts</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <i data-lucide="headphones" class="w-6 h-6 text-primary"></i>
+                        <span class="font-semibold">After-Sales Support</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients Section -->
+        <section class="py-16 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+                <div class="text-center">
+                    <span class="text-sm font-semibold text-primary uppercase tracking-wider">Trusted By Industry Leaders</span>
+                    <h2 class="text-3xl font-bold mt-2 text-dark">Our Major Clients</h2>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="flex marquee-track gap-16 items-center">
+                    <!-- Client logos repeated for seamless loop -->
+                    <div class="flex gap-16 items-center min-w-max px-8">
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/orient-logo-png_seeklogo-271630.png" alt="Orient" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/EFERT.PK_BIG-c3ffece4.png" alt="Engro" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/IMG560bestway-cement-logo.webp" alt="Bestway" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/Logo-Maple-Leaf-Cement-Factory-240x240-2020.webp" alt="Maple Leaf" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/images.png" alt="Kohat Cement" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/PEL-Logo-DP.webp" alt="PEL" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/chakwal-group-logo.png" alt="Chakwal Group" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/berger_paints.jpeg" alt="Berger" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/Ittefaq-Hospital.webp" alt="Ittefaq Hospital" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/logo-mobile.png" alt="National Hospital" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/images.jpeg" alt="Kulsum Hospital" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="flex gap-16 items-center min-w-max px-8">
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/orient-logo-png_seeklogo-271630.png" alt="Orient" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/EFERT.PK_BIG-c3ffece4.png" alt="Engro" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/IMG560bestway-cement-logo.webp" alt="Bestway" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/Logo-Maple-Leaf-Cement-Factory-240x240-2020.webp" alt="Maple Leaf" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/images.png" alt="Kohat Cement" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/PEL-Logo-DP.webp" alt="PEL" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/chakwal-group-logo.png" alt="Chakwal Group" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/berger_paints.jpeg" alt="Berger" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/Ittefaq-Hospital.webp" alt="Ittefaq Hospital" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/logo-mobile.png" alt="National Hospital" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                        <div class="h-20 w-40 flex items-center justify-center transition-all duration-300 hover:scale-125">
+                            <img src="Logo/Our Clients/images.jpeg" alt="Kulsum Hospital" class="max-h-16 max-w-[150px] object-contain">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-24 bg-gray-50 grid-pattern">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-sm font-semibold text-primary uppercase tracking-wider">What We Offer</span>
+                    <h2 class="text-4xl font-bold mt-3 text-dark">Our Core Services</h2>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Comprehensive energy and electrical solutions tailored for industrial and commercial needs.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="service-card p-8 rounded-xl card-hover-glow">
+                        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
+                            <i data-lucide="battery-charging" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Energy Solutions</h3>
+                        <p class="text-gray-600 leading-relaxed">Solar systems, UPS installations, and battery solutions for uninterrupted power supply.</p>
+                        <a href="services.html" class="inline-flex items-center gap-2 mt-6 text-primary font-semibold hover:gap-3 transition-all">
+                            Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="service-card p-8 rounded-xl card-hover-glow">
+                        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
+                            <i data-lucide="plug" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Electrical Contracting</h3>
+                        <p class="text-gray-600 leading-relaxed">Power lines, infrastructure development, and transmission systems for industrial scale.</p>
+                        <a href="services.html" class="inline-flex items-center gap-2 mt-6 text-primary font-semibold hover:gap-3 transition-all">
+                            Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="service-card p-8 rounded-xl card-hover-glow">
+                        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
+                            <i data-lucide="settings" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Installation & Commissioning</h3>
+                        <p class="text-gray-600 leading-relaxed">Professional setup, testing, and commissioning of electrical systems and equipment.</p>
+                        <a href="services.html" class="inline-flex items-center gap-2 mt-6 text-primary font-semibold hover:gap-3 transition-all">
+                            Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="service-card p-8 rounded-xl card-hover-glow">
+                        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
+                            <i data-lucide="wrench" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Maintenance & Repair</h3>
+                        <p class="text-gray-600 leading-relaxed">Long-term service contracts ensuring optimal performance and minimal downtime.</p>
+                        <a href="services.html" class="inline-flex items-center gap-2 mt-6 text-primary font-semibold hover:gap-3 transition-all">
+                            Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="service-card p-8 rounded-xl card-hover-glow">
+                        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
+                            <i data-lucide="cpu" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Automation Systems</h3>
+                        <p class="text-gray-600 leading-relaxed">Control panels, PLC programming, and industrial automation solutions.</p>
+                        <a href="services.html" class="inline-flex items-center gap-2 mt-6 text-primary font-semibold hover:gap-3 transition-all">
+                            Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="service-card p-8 rounded-xl card-hover-glow bg-gradient-to-br from-primary/5 to-transparent border-primary/20">
+                        <div class="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6 text-white">
+                            <i data-lucide="zap" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Custom Solutions</h3>
+                        <p class="text-gray-600 leading-relaxed">Tailored engineering solutions designed specifically for your unique power requirements.</p>
+                        <a href="contact.html" class="inline-flex items-center gap-2 mt-6 text-primary font-semibold hover:gap-3 transition-all">
+                            Get Quote <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
+                    <div>
+                        <span class="text-sm font-semibold text-primary uppercase tracking-wider">Portfolio</span>
+                        <h2 class="text-4xl font-bold mt-3 text-dark">Featured Projects</h2>
+                    </div>
+                    <a href="products.html" class="mt-4 md:mt-0 inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
+                        View Products Catalog <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="group img-zoom-container rounded-xl overflow-hidden relative aspect-[4/3] cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=600&h=450&fit=crop" alt="UPS Installation" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-primary text-sm font-semibold mb-1">Industrial UPS</span>
+                            <h3 class="text-white text-xl font-bold">200KVA UPS Installation</h3>
+                            <p class="text-gray-300 text-sm mt-2">Complete power backup solution for manufacturing facility</p>
+                        </div>
+                    </div>
+                    
+                    <div class="group img-zoom-container rounded-xl overflow-hidden relative aspect-[4/3] cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=450&fit=crop" alt="Solar Project" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-primary text-sm font-semibold mb-1">Solar Energy</span>
+                            <h3 class="text-white text-xl font-bold">Commercial Solar Grid</h3>
+                            <p class="text-gray-300 text-sm mt-2">500kW solar installation for textile industry</p>
+                        </div>
+                    </div>
+                    
+                    <div class="group img-zoom-container rounded-xl overflow-hidden relative aspect-[4/3] cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1617269778723-73a40cf299bd?w=600&h=450&fit=crop" alt="HT Line" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-primary text-sm font-semibold mb-1">Transmission</span>
+                            <h3 class="text-white text-xl font-bold">HT-LT Line Infrastructure</h3>
+                            <p class="text-gray-300 text-sm mt-2">Power distribution network for industrial zone</p>
+                        </div>
+                    </div>
+                    
+                    <div class="group img-zoom-container rounded-xl overflow-hidden relative aspect-[4/3] cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=600&h=450&fit=crop" alt="Cable Trays" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-primary text-sm font-semibold mb-1">Cable Management</span>
+                            <h3 class="text-white text-xl font-bold">Cable Tray Systems</h3>
+                            <p class="text-gray-300 text-sm mt-2">Custom fabricated cable trays for commercial complex</p>
+                        </div>
+                    </div>
+                    
+                    <div class="group img-zoom-container rounded-xl overflow-hidden relative aspect-[4/3] cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&h=450&fit=crop" alt="Distribution Panel" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-primary text-sm font-semibold mb-1">Distribution</span>
+                            <h3 class="text-white text-xl font-bold">Smart Distribution Panels</h3>
+                            <p class="text-gray-300 text-sm mt-2">IEC standard DBs with complete MCB wiring</p>
+                        </div>
+                    </div>
+                    
+                    <div class="group img-zoom-container rounded-xl overflow-hidden relative aspect-[4/3] cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=450&fit=crop" alt="LED Lighting" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-primary text-sm font-semibold mb-1">Lighting</span>
+                            <h3 class="text-white text-xl font-bold">Industrial LED Retrofit</h3>
+                            <p class="text-gray-300 text-sm mt-2">Energy-efficient lighting for warehouse facility</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="py-24 bg-dark text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,106,0,0.3) 1px, transparent 0); background-size: 40px 40px;"></div>
+            </div>
+            
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <span class="text-sm font-semibold text-primary uppercase tracking-wider">Why Choose Us</span>
+                        <h2 class="text-4xl font-bold mt-3 mb-6">Engineering Excellence You Can Trust</h2>
+                        <p class="text-gray-400 text-lg mb-8">Since 2010, we've built a reputation for delivering reliable power solutions that keep Pakistan's industries running.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary flex-shrink-0">
+                                    <i data-lucide="award" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">10+ Years Experience</h4>
+                                    <p class="text-gray-400 text-sm mt-1">Established in 2010, bringing a decade of field experience to every electrical deployment.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary flex-shrink-0">
+                                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Certified Safety Standards</h4>
+                                    <p class="text-gray-400 text-sm mt-1">Our products conform to standard specifications (e.g. IEC) and undergo detailed checks.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary flex-shrink-0">
+                                    <i data-lucide="users" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Qualified Engineers & Technicians</h4>
+                                    <p class="text-gray-400 text-sm mt-1">Experienced staff ensuring top-quality service, commissioning, and support.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="aspect-square rounded-2xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=800&fit=crop" alt="Engineering Team" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-8 -left-8 bg-primary p-6 rounded-xl shadow-2xl">
+                            <div class="text-4xl font-black text-white">14+</div>
+                            <div class="text-white/90 text-sm font-medium">Years of Service</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries -->
+        <section class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-sm font-semibold text-primary uppercase tracking-wider">Industries We Serve</span>
+                    <h2 class="text-4xl font-bold mt-3 text-dark">Powering Every Sector</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-8 rounded-xl text-center hover:shadow-xl transition-all hover:-translate-y-1 border border-transparent hover:border-primary/20">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
+                            <i data-lucide="building-2" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Hospitals</h3>
+                        <p class="text-gray-500 text-sm">Critical power backup for healthcare facilities</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl text-center hover:shadow-xl transition-all hover:-translate-y-1 border border-transparent hover:border-primary/20">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
+                            <i data-lucide="factory" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Factories</h3>
+                        <p class="text-gray-500 text-sm">Industrial automation and power systems</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl text-center hover:shadow-xl transition-all hover:-translate-y-1 border border-transparent hover:border-primary/20">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
+                            <i data-lucide="landmark" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Commercial Buildings</h3>
+                        <p class="text-gray-500 text-sm">Smart electrical infrastructure solutions</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl text-center hover:shadow-xl transition-all hover:-translate-y-1 border border-transparent hover:border-primary/20">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
+                            <i data-lucide="warehouse" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Warehouses</h3>
+                        <p class="text-gray-500 text-sm">Efficient lighting and distribution systems</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="py-20 bg-primary relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+                <svg width="100%" height="100%">
+                    <pattern id="cta-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <circle cx="20" cy="20" r="1" fill="white"/>
+                    </pattern>
+                    <rect width="100%" height="100%" fill="url(#cta-pattern)"/>
+                </svg>
+            </div>
+            
+            <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Need a Reliable Energy Partner?</h2>
+                <p class="text-white/90 text-lg mb-8 max-w-2xl mx-auto">Get a free site visit and consultation from our engineering experts. We assess your needs and design the perfect power solution.</p>
+                <a href="contact.html" class="inline-flex items-center gap-3 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 hover:scale-105 transition-all shadow-xl">
+                    <i data-lucide="calendar-check" class="w-6 h-6"></i>
+                    <span>Get Free Site Visit</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-20 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <a href="index.html" class="inline-block mb-6">
+                        <img src="Logo/fast_logo.png" alt="FAST TECH Logo" class="h-10 w-auto object-contain footer-logo">
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed">Powering Pakistan's industries with reliable energy solutions, electrical contracting, and premium power products since 2010.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-primary transition-colors">Products</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">Products</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="product-industrial-ups.html" class="hover:text-primary transition-colors">UPS Systems</a></li>
+                        <li><a href="product-dry-gel-battery.html" class="hover:text-primary transition-colors">Dry Batteries</a></li>
+                        <li><a href="product-lt-ht-overhead.html" class="hover:text-primary transition-colors">LT-HT Materials</a></li>
+                        <li><a href="product-din-rail-power.html" class="hover:text-primary transition-colors">DIN Rail Supplies</a></li>
+                        <li><a href="product-panel-dbs-cable-trays.html" class="hover:text-primary transition-colors">Panel DBs & Trays</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">Contact</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"></i>
+                            <span>Lahore, Pakistan</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-primary flex-shrink-0"></i>
+                            <a href="tel:+923224462686" class="hover:text-primary transition-colors">+92 322 4462686</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-primary flex-shrink-0"></i>
+                            <a href="mailto:fastech.eng@gmail.com" class="hover:text-primary transition-colors">fastech.eng@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section-divider mb-8"></div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2026 FAST TECH Engineering Services. All rights reserved.</p>
+                <p>Engineering Excellence Since 2010</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923224462686" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+    </a>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-24 left-1/2 -translate-x-1/2 bg-dark text-white px-6 py-3 rounded-lg shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center gap-3">
+        <i data-lucide="check-circle" class="w-5 h-5 text-primary"></i>
+        <span id="toast-message">Message sent successfully!</span>
+    </div>
+
+    <!-- Script link -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>
