@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMC Services Pakistan | Annual Maintenance Contract | FASTTECHENG</title>
+    <meta name="description" content="FAST TECH provides reliable Annual Maintenance Contract (AMC) services in Pakistan for industrial UPS, stabilizers, and electrical panels. Secure zero downtime.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff6a00',
+                        'primary-dark': '#e55f00',
+                        dark: '#0a0a0a',
+                        'dark-light': '#1a1a1a',
+                        'gray-50': '#fafafa',
+                        'gray-100': '#f5f5f5',
+                        'gray-200': '#e5e5e5',
+                        'gray-800': '#262626',
+                        'gray-900': '#171717',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased page-fade-in">
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="text-2xl font-bold tracking-tight">FAST TECH</div>
+        <div class="loader-line"></div>
+        <div class="text-sm text-gray-500">Powering Pakistan Since 2010</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center group">
+                    <img src="Logo/fast_logo.png" alt="FAST TECH Logo" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105 duration-300">
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
+                        Home
+                    </a>
+                    <a href="about.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
+                        About Us
+                    </a>
+                    
+                    <!-- Products Dropdown -->
+                    <div class="relative group/dropdown">
+                        <a href="products.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative flex items-center gap-1 py-2">
+                            Products
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover/dropdown:rotate-180"></i>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-150 rounded-lg shadow-xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 z-50 py-2">
+                            <a href="product-dry-gel-battery.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">DRY Gel Battery Solutions</a>
+                            <a href="product-lt-ht-overhead.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">LT-HT Over-Head Material</a>
+                            <a href="product-industrial-ups.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Industrial UPS Repairing</a>
+                            <a href="product-din-rail-power.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Din Rail Power Supply</a>
+                            <a href="product-panel-dbs-cable-trays.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Panel DBs & Cable Trays</a>
+                            <a href="product-servo-stabilizers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Servo Motor Stabilizers</a>
+                            <a href="product-automotive-filters.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Automotive & Genset Filters</a>
+                            <div class="border-t border-gray-100 my-1"></div>
+                            <a href="products.html" class="block px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/5 transition-colors">View All Products</a>
+                        </div>
+                    </div>
+
+                                        <!-- Services Dropdown -->
+                    <div class="relative group/dropdown">
+                        <a href="services.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative flex items-center gap-1 py-2">
+                            Services
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover/dropdown:rotate-180"></i>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-150 rounded-lg shadow-xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 z-50 py-2">
+                            <a href="service-ups-repair.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">UPS Repair Services</a>
+                            <a href="service-ups-maintenance.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">UPS Maintenance Services</a>
+                            <a href="service-electrical-engineering.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Electrical Engineering</a>
+                            <a href="service-amc-services.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">AMC Services</a>
+                            <div class="border-t border-gray-100 my-1"></div>
+                            <a href="services.html" class="block px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/5 transition-colors">View All Services</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- CTA & Mobile Toggle -->
+                <div class="flex items-center gap-4">
+                    <a href="tel:+923224462686" class="hidden md:flex btn-primary text-sm py-2.5 px-5">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        <span>Call Now</span>
+                    </a>
+                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-dark hover:text-primary transition-colors">
+                        <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-80 bg-white z-50 shadow-2xl p-8 lg:hidden">
+        <div class="flex justify-between items-center mb-12">
+            <span class="font-bold text-xl">Menu</span>
+            <button onclick="toggleMobileMenu()" class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="flex flex-col gap-6">
+            <a href="index.html" class="text-lg font-medium hover:text-primary transition-colors">Home</a>
+            <a href="about.html" class="text-lg font-medium hover:text-primary transition-colors">About Us</a>
+            
+            <!-- Mobile Products Collapsible -->
+            <div class="flex flex-col gap-2">
+                <button onclick="toggleMobileDropdown('mobile-products-submenu')" class="flex justify-between items-center text-lg font-medium text-left hover:text-primary transition-colors w-full">
+                    <span>Products</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200" id="mobile-products-arrow"></i>
+                </button>
+                <div id="mobile-products-submenu" class="hidden flex-col gap-3 pl-4 border-l border-gray-200 mt-2">
+                    <a href="product-dry-gel-battery.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">DRY Gel Battery Solutions</a>
+                    <a href="product-lt-ht-overhead.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">LT-HT Over-Head Material</a>
+                    <a href="product-industrial-ups.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">Industrial UPS Repairing</a>
+                    <a href="product-din-rail-power.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">Din Rail Power Supply</a>
+                    <a href="product-panel-dbs-cable-trays.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">Panel DBs & Cable Trays</a>
+                    <a href="product-servo-stabilizers.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">Servo Motor Stabilizers</a>
+                    <a href="product-automotive-filters.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">Automotive & Genset Filters</a>
+                    <a href="products.html" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors pt-1">All Products Catalog</a>
+                </div>
+            </div>
+
+                        <!-- Mobile Services Collapsible -->
+            <div class="flex flex-col gap-2">
+                <button onclick="toggleMobileDropdown('mobile-services-submenu', 'mobile-services-arrow')" class="flex justify-between items-center text-lg font-medium text-left hover:text-primary transition-colors w-full">
+                    <span>Services</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200" id="mobile-services-arrow"></i>
+                </button>
+                <div id="mobile-services-submenu" class="hidden flex-col gap-3 pl-4 border-l border-gray-200 mt-2">
+                    <a href="service-ups-repair.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">UPS Repair Services</a>
+                    <a href="service-ups-maintenance.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">UPS Maintenance Services</a>
+                    <a href="service-electrical-engineering.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">Electrical Engineering</a>
+                    <a href="service-amc-services.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">AMC Services</a>
+                    <a href="services.html" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors pt-1">All Services Overview</a>
+                </div>
+            </div>
+            <a href="contact.html" class="text-lg font-medium hover:text-primary transition-colors">Contact Us</a>
+        </div>
+        <div class="mt-12 pt-8 border-t border-gray-200">
+            <div class="text-sm text-gray-500 mb-2">Call us directly</div>
+            <a href="tel:+923224462686" class="text-xl font-bold text-primary">+92 322 4462686</a>
+        </div>
+    </div>
+    <div id="mobile-overlay" onclick="toggleMobileMenu()" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden backdrop-blur-sm"></div>
+
+    <main class="pt-20">
+        
+        <!-- Hero Section -->
+        <section class="relative py-28 bg-dark text-white overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1600&h=800&fit=crop" class="w-full h-full object-cover" alt="Maintenance Operations">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-dark via-dark/95 to-dark/80"></div>
+            
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl stagger-container">
+                    <span class="text-primary font-semibold uppercase tracking-wider text-sm stagger-item">Uninterrupted Operation Guarantee</span>
+                    <h1 class="text-5xl md:text-6xl font-bold mt-4 mb-6 leading-tight stagger-item">Annual Maintenance Contracts (AMC)</h1>
+                    <p class="text-xl text-gray-350 leading-relaxed mb-8 stagger-item">Secure your industrial power systems with FAST TECH's tailored AMC services. Scheduled checkups, thermal profiling, 24/7 priority support, and detailed health reporting.</p>
+                    <div class="flex flex-wrap gap-4 stagger-item">
+                        <a href="https://wa.me/923224462686?text=AMC%20Services%20Inquiry" target="_blank" class="btn-primary">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Discuss AMC Plan on WhatsApp</span>
+                        </a>
+                        <a href="contact.html" class="btn-outline border-white text-white hover:bg-white hover:text-dark">
+                            <span>Request Custom SLA Quote</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KPI Row -->
+        <section class="bg-gray-100 py-6 border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="flex items-center gap-4 bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark">Zero Downtime Focus</h4>
+                            <p class="text-xs text-gray-500">Preventive site inspections</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
+                            <i data-lucide="headphones" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark">24/7 Priority Support</h4>
+                            <p class="text-xs text-gray-500">Rapid emergency diagnostic dispatch</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
+                            <i data-lucide="map" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark">Nationwide Coverage</h4>
+                            <p class="text-xs text-gray-500">SLA support across Pakistan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Two Column Overview -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <span class="text-sm font-semibold text-primary uppercase tracking-wider">Operational Security</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-dark mt-2 mb-6">Customized Contracts for Peace of Mind</h2>
+                        <p class="text-gray-655 text-lg leading-relaxed mb-6">
+                            Industrial factories, corporate facilities, healthcare providers, and data centers cannot afford sudden power outages. FAST TECH Annual Maintenance Contracts (AMC) offer a structured framework for periodic system audits, cleaning, load testing, and emergency diagnostics, keeping your power systems ready.
+                        </p>
+                        <p class="text-gray-655 leading-relaxed">
+                            Our AMC programs cover all types of Online UPS systems, Servo Voltage Stabilizers, AC-DC power supplies, HT/LT electrical lines, distribution panelboards, and battery banks. Each visit includes detailed diagnostic logging, giving you clear visibility into equipment life expectancies.
+                        </p>
+                    </div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-gray-200 card-hover-glow relative">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop" alt="Corporate facility room" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scope Grid -->
+        <section class="py-20 bg-gray-50 grid-pattern">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-dark">What Our AMC Services Cover</h2>
+                    <p class="mt-4 text-gray-600 max-w-xl mx-auto">We provide full asset coverage options tailored for industrial setups.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm transition-all hover:shadow-md">
+                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
+                            <i data-lucide="calendar" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Scheduled Maintenance Visits</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Regular periodic visits (monthly or quarterly) dedicated to hardware checking, cleaning, and testing.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm transition-all hover:shadow-md">
+                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
+                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Complete Power Assets Cover</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">SLA plans covering industrial Online UPS, stabilizers, dry battery banks, distribution boards, and switchgear.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm transition-all hover:shadow-md">
+                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
+                            <i data-lucide="thermometer" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Thermal Hotspot Profiling</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Early detection of electrical joint wear and overloaded breakers using professional infrared thermal diagnostics.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm transition-all hover:shadow-md">
+                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
+                            <i data-lucide="phone-call" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Priority Standby Support</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Priority access to emergency standby units and spare parts, with guaranteed fast response times.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm transition-all hover:shadow-md">
+                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
+                            <i data-lucide="file-text" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Detailed Status Reporting</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Submitting comprehensive diagnostics reports on battery health, capacity parameters, and replacement scheduling recommendations.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm transition-all hover:shadow-md bg-gradient-to-br from-primary/5 to-transparent border-primary/20 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold mb-3 text-primary">Pakistan-Wide Service</h3>
+                            <p class="text-sm text-gray-500 leading-relaxed mb-6">We provide AMC coverage services to factories and corporate offices in Lahore, Karachi, Islamabad, Faisalabad, and other industrial centers.</p>
+                        </div>
+                        <a href="contact.html" class="text-primary font-bold text-sm inline-flex items-center gap-2">
+                            Request Custom SLA Proposal <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process timeline -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-dark">Our AMC SLA Workflow</h2>
+                    <p class="mt-4 text-gray-600 max-w-xl mx-auto">Providing structured maintenance routines with minimal operational disruption.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="relative text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-xl mx-auto mb-4 border border-primary/20">1</div>
+                        <h4 class="font-bold mb-2">Technical Site Audit</h4>
+                        <p class="text-xs text-gray-500">We inspect your current machinery, assess voltage capacities, and note active loads.</p>
+                    </div>
+                    <div class="relative text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-xl mx-auto mb-4 border border-primary/20">2</div>
+                        <h4 class="font-bold mb-2">Customized SLA Plans</h4>
+                        <p class="text-xs text-gray-500">We offer custom scopes, periodic intervals, response limits, and spare cover agreements.</p>
+                    </div>
+                    <div class="relative text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-xl mx-auto mb-4 border border-primary/20">3</div>
+                        <h4 class="font-bold mb-2">Routine Preventive Care</h4>
+                        <p class="text-xs text-gray-500">Our engineering team visits on schedule to clean cabinets, test cells, and verify waveforms.</p>
+                    </div>
+                    <div class="relative text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-xl mx-auto mb-4 border border-primary/20">4</div>
+                        <h4 class="font-bold mb-2">24/7 Breakdown Coverage</h4>
+                        <p class="text-xs text-gray-500">Should any outage trip your power setup, our emergency team provides prompt support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-dark">Frequently Asked Questions</h2>
+                    <p class="mt-4 text-gray-655">Find answers to common questions about our Annual Maintenance Contracts.</p>
+                </div>
+                
+                <div class="space-y-4">
+                    <details class="group bg-white border border-gray-200 rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
+                        <summary class="flex justify-between items-center font-bold text-dark cursor-pointer list-none">
+                            <span>What equipment is covered under your AMC Services?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <p class="mt-4 text-gray-600 leading-relaxed text-sm">Our AMC plans cover a comprehensive range of critical equipment, including industrial Online UPS systems, Servo Voltage Stabilizers, switchgear, distribution panelboards, battery banks, AC-DC power supplies, and HT/LT transmission systems.</p>
+                    </details>
+
+                    <details class="group bg-white border border-gray-200 rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
+                        <summary class="flex justify-between items-center font-bold text-dark cursor-pointer list-none">
+                            <span>Which industries do you provide AMC Services for?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <p class="mt-4 text-gray-600 leading-relaxed text-sm">We provide AMC plans to factories, textile mills, cement facilities, corporate offices, healthcare institutions, data centers, warehouses, and telecom networks.</p>
+                    </details>
+
+                    <details class="group bg-white border border-gray-200 rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
+                        <summary class="flex justify-between items-center font-bold text-dark cursor-pointer list-none">
+                            <span>Why should I choose FAST TECH Engineering Services?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <p class="mt-4 text-gray-600 leading-relaxed text-sm">Since 2010, FAST TECH has built a reputation for engineering excellence. We have completed over 500 projects and maintain a dedicated team of certified engineers. Our contracts are customized and offer 24/7 standby support.</p>
+                    </details>
+
+                    <details class="group bg-white border border-gray-200 rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
+                        <summary class="flex justify-between items-center font-bold text-dark cursor-pointer list-none">
+                            <span>Do you offer customized Annual Maintenance Contracts?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <p class="mt-4 text-gray-600 leading-relaxed text-sm">Yes, we specialize in tailored contracts. We study your equipment models, redundancy needs, and budget limits to craft an SLA with custom visit intervals and spare-part options.</p>
+                    </details>
+
+                    <details class="group bg-white border border-gray-200 rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
+                        <summary class="flex justify-between items-center font-bold text-dark cursor-pointer list-none">
+                            <span>How can I request an AMC quotation?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <p class="mt-4 text-gray-600 leading-relaxed text-sm">You can contact us via phone at +92 322 4462686, WhatsApp, or through our contact page. We will schedule a site visit to assess your machinery and provide a detailed proposal.</p>
+                    </details>
+
+                    <details class="group bg-white border border-gray-200 rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
+                        <summary class="flex justify-between items-center font-bold text-dark cursor-pointer list-none">
+                            <span>Do you provide AMC Services across Pakistan?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-primary transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <p class="mt-4 text-gray-600 leading-relaxed text-sm">Yes, our engineering teams are mobile and serve nationwide, managing projects and AMCs for industrial centers in Lahore, Karachi, Islamabad, Faisalabad, Peshawar, and Multan.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-dark text-white rounded-2xl p-12 text-center relative overflow-hidden shadow-xl border border-gray-800">
+                    <div class="absolute inset-0 opacity-10 grid-pattern"></div>
+                    <div class="relative z-10">
+                        <h2 class="text-3xl font-extrabold mb-4">Request a Custom AMC Proposal for Your Facility</h2>
+                        <p class="text-gray-400 text-lg mb-8 max-w-xl mx-auto">Ensure smooth and uninterrupted power operations. Chat with our engineering manager to request an on-site audit.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="https://wa.me/923224462686?text=AMC%20Service%2520Contract%20Request" target="_blank" class="btn-primary">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                Request Audit via WhatsApp
+                            </a>
+                            <a href="contact.html" class="btn-outline border-white text-white hover:bg-white hover:text-dark">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                                Online Inquiry Form
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-20 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <a href="index.html" class="inline-block mb-6">
+                        <img src="Logo/fast_logo.png" alt="FAST TECH Logo" class="h-10 w-auto object-contain footer-logo">
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed">Powering Pakistan's industries with reliable energy solutions, electrical contracting, and premium power products since 2010.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-primary transition-colors">Products</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">Products</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="product-industrial-ups.html" class="hover:text-primary transition-colors">UPS Systems</a></li>
+                        <li><a href="product-dry-gel-battery.html" class="hover:text-primary transition-colors">Dry Batteries</a></li>
+                        <li><a href="product-lt-ht-overhead.html" class="hover:text-primary transition-colors">LT-HT Materials</a></li>
+                        <li><a href="product-din-rail-power.html" class="hover:text-primary transition-colors">DIN Rail Supplies</a></li>
+                        <li><a href="product-panel-dbs-cable-trays.html" class="hover:text-primary transition-colors">Panel DBs & Trays</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">Contact</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"></i>
+                            <span>Lahore, Pakistan</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-primary flex-shrink-0"></i>
+                            <a href="tel:+923224462686" class="hover:text-primary transition-colors">+92 322 4462686</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-primary flex-shrink-0"></i>
+                            <a href="mailto:fastech.eng@gmail.com" class="hover:text-primary transition-colors">fastech.eng@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section-divider mb-8"></div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2026 FAST TECH Engineering Services. All rights reserved.</p>
+                <p>Engineering Excellence Since 2010</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923224462686" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+    </a>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-24 left-1/2 -translate-x-1/2 bg-dark text-white px-6 py-3 rounded-lg shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center gap-3">
+        <i data-lucide="check-circle" class="w-5 h-5 text-primary"></i>
+        <span id="toast-message">Message sent successfully!</span>
+    </div>
+
+    <!-- Script link -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>

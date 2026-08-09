@@ -87,14 +87,30 @@
                             <a href="product-industrial-ups.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Industrial UPS Repairing</a>
                             <a href="product-din-rail-power.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Din Rail Power Supply</a>
                             <a href="product-panel-dbs-cable-trays.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Panel DBs & Cable Trays</a>
+                            <a href="product-servo-stabilizers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Servo Motor Stabilizers</a>
+                            <a href="product-automotive-filters.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Automotive & Genset Filters</a>
+                            <a href="product-servo-stabilizers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Servo Motor Stabilizers</a>
+                            <a href="product-automotive-filters.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Automotive & Genset Filters</a>
                             <div class="border-t border-gray-100 my-1"></div>
                             <a href="products.html" class="block px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/5 transition-colors">View All Products</a>
                         </div>
                     </div>
 
-                    <a href="services.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
-                        Services
-                    </a>
+                                        <!-- Services Dropdown -->
+                    <div class="relative group/dropdown">
+                        <a href="services.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative flex items-center gap-1 py-2">
+                            Services
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover/dropdown:rotate-180"></i>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-150 rounded-lg shadow-xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 z-50 py-2">
+                            <a href="service-ups-repair.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">UPS Repair Services</a>
+                            <a href="service-ups-maintenance.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">UPS Maintenance Services</a>
+                            <a href="service-electrical-engineering.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Electrical Engineering</a>
+                            <a href="service-amc-services.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">AMC Services</a>
+                            <div class="border-t border-gray-100 my-1"></div>
+                            <a href="services.html" class="block px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/5 transition-colors">View All Services</a>
+                        </div>
+                    </div>
                     <a href="contact.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
                         Contact Us
                     </a>
@@ -138,11 +154,28 @@
                     <a href="product-industrial-ups.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Industrial UPS Repairing</a>
                     <a href="product-din-rail-power.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Din Rail Power Supply</a>
                     <a href="product-panel-dbs-cable-trays.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Panel DBs & Cable Trays</a>
+                    <a href="product-servo-stabilizers.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Servo Motor Stabilizers</a>
+                    <a href="product-automotive-filters.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Automotive & Genset Filters</a>
+                    <a href="product-servo-stabilizers.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Servo Motor Stabilizers</a>
+                    <a href="product-automotive-filters.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Automotive & Genset Filters</a>
                     <a href="products.html" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors pt-1">All Products Catalog</a>
                 </div>
             </div>
 
-            <a href="services.html" class="text-lg font-medium hover:text-primary transition-colors">Services</a>
+                        <!-- Mobile Services Collapsible -->
+            <div class="flex flex-col gap-2">
+                <button onclick="toggleMobileDropdown('mobile-services-submenu', 'mobile-services-arrow')" class="flex justify-between items-center text-lg font-medium text-left hover:text-primary transition-colors w-full">
+                    <span>Services</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200" id="mobile-services-arrow"></i>
+                </button>
+                <div id="mobile-services-submenu" class="hidden flex-col gap-3 pl-4 border-l border-gray-200 mt-2">
+                    <a href="service-ups-repair.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">UPS Repair Services</a>
+                    <a href="service-ups-maintenance.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">UPS Maintenance Services</a>
+                    <a href="service-electrical-engineering.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">Electrical Engineering</a>
+                    <a href="service-amc-services.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">AMC Services</a>
+                    <a href="services.html" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors pt-1">All Services Overview</a>
+                </div>
+            </div>
             <a href="contact.html" class="text-lg font-medium hover:text-primary transition-colors">Contact Us</a>
         </div>
         <div class="mt-12 pt-8 border-t border-gray-200">

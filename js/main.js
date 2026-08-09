@@ -302,10 +302,10 @@ function showToast(message) {
 }
 window.showToast = showToast;
 
-// Toggle mobile products dropdown
-function toggleMobileDropdown(submenuId) {
+// Toggle mobile products/services dropdown
+function toggleMobileDropdown(submenuId, arrowId) {
     const submenu = document.getElementById(submenuId);
-    const arrow = document.getElementById('mobile-products-arrow');
+    const arrow = document.getElementById(arrowId || 'mobile-products-arrow');
     if (!submenu) return;
     
     if (submenu.classList.contains('hidden')) {

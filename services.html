@@ -86,14 +86,28 @@
                             <a href="product-industrial-ups.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Industrial UPS Repairing</a>
                             <a href="product-din-rail-power.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Din Rail Power Supply</a>
                             <a href="product-panel-dbs-cable-trays.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Panel DBs & Cable Trays</a>
+                            <a href="product-servo-stabilizers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Servo Motor Stabilizers</a>
+                            <a href="product-automotive-filters.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Automotive & Genset Filters</a>
                             <div class="border-t border-gray-100 my-1"></div>
                             <a href="products.html" class="block px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/5 transition-colors">View All Products</a>
                         </div>
                     </div>
 
-                    <a href="services.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
-                        Services
-                    </a>
+                                        <!-- Services Dropdown -->
+                    <div class="relative group/dropdown">
+                        <a href="services.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative flex items-center gap-1 py-2">
+                            Services
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover/dropdown:rotate-180"></i>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-150 rounded-lg shadow-xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 z-50 py-2">
+                            <a href="service-ups-repair.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">UPS Repair Services</a>
+                            <a href="service-ups-maintenance.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">UPS Maintenance Services</a>
+                            <a href="service-electrical-engineering.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Electrical Engineering</a>
+                            <a href="service-amc-services.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">AMC Services</a>
+                            <div class="border-t border-gray-100 my-1"></div>
+                            <a href="services.html" class="block px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/5 transition-colors">View All Services</a>
+                        </div>
+                    </div>
                     <a href="contact.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
                         Contact Us
                     </a>
@@ -137,11 +151,26 @@
                     <a href="product-industrial-ups.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Industrial UPS Repairing</a>
                     <a href="product-din-rail-power.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Din Rail Power Supply</a>
                     <a href="product-panel-dbs-cable-trays.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Panel DBs & Cable Trays</a>
+                    <a href="product-servo-stabilizers.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Servo Motor Stabilizers</a>
+                    <a href="product-automotive-filters.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Automotive & Genset Filters</a>
                     <a href="products.html" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors pt-1">All Products Catalog</a>
                 </div>
             </div>
 
-            <a href="services.html" class="text-lg font-medium hover:text-primary transition-colors">Services</a>
+                        <!-- Mobile Services Collapsible -->
+            <div class="flex flex-col gap-2">
+                <button onclick="toggleMobileDropdown('mobile-services-submenu', 'mobile-services-arrow')" class="flex justify-between items-center text-lg font-medium text-left hover:text-primary transition-colors w-full">
+                    <span>Services</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200" id="mobile-services-arrow"></i>
+                </button>
+                <div id="mobile-services-submenu" class="hidden flex-col gap-3 pl-4 border-l border-gray-200 mt-2">
+                    <a href="service-ups-repair.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">UPS Repair Services</a>
+                    <a href="service-ups-maintenance.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">UPS Maintenance Services</a>
+                    <a href="service-electrical-engineering.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">Electrical Engineering</a>
+                    <a href="service-amc-services.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">AMC Services</a>
+                    <a href="services.html" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors pt-1">All Services Overview</a>
+                </div>
+            </div>
             <a href="contact.html" class="text-lg font-medium hover:text-primary transition-colors">Contact Us</a>
         </div>
         <div class="mt-12 pt-8 border-t border-gray-200">
@@ -170,145 +199,135 @@
         <section class="py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
                 
-                <!-- Service 1 -->
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="order-2 lg:order-1">
-                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
-                            <i data-lucide="battery-charging" class="w-8 h-8"></i>
-                        </div>
-                        <h2 class="text-3xl font-bold mb-4">Energy Solutions</h2>
-                        <p class="text-gray-600 text-lg mb-6">Comprehensive energy systems including solar power installations, industrial UPS systems (1KVA to 200KVA), and battery banks. We design solutions that ensure zero downtime for critical operations.</p>
-                        <div class="space-y-3">
-                            <div class="flex items-center gap-3 text-gray-700">
-                                <i data-lucide="check" class="w-5 h-5 text-primary"></i>
-                                <span>Reliable performance under peak load</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-700">
-                                <i data-lucide="check" class="w-5 h-5 text-primary"></i>
-                                <span>Cost-efficient energy management</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-700">
-                                <i data-lucide="check" class="w-5 h-5 text-primary"></i>
-                                <span>Long-term durability and support</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-1 lg:order-2 aspect-[4/3] rounded-2xl overflow-hidden img-zoom-container">
-                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop" alt="Energy Solutions Solar panels" class="w-full h-full object-cover">
-                    </div>
-                </div>
 
-                <!-- Service 2 -->
+                <!-- Service 6: UPS Repair -->
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="aspect-[4/3] rounded-2xl overflow-hidden img-zoom-container">
-                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop" alt="Electrical Contracting High voltage lines" class="w-full h-full object-cover">
-                    </div>
-                    <div>
-                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
-                            <i data-lucide="plug" class="w-8 h-8"></i>
-                        </div>
-                        <h2 class="text-3xl font-bold mb-4">Electrical Contracting</h2>
-                        <p class="text-gray-600 text-lg mb-6">Full-scale electrical infrastructure development including power lines, transmission systems, HT-LT overhead materials, and civil foundation work for transmission towers.</p>
-                        <div class="space-y-3">
-                            <div class="flex items-center gap-3 text-gray-700">
-                                <i data-lucide="check" class="w-5 h-5 text-primary"></i>
-                                <span>Licensed HT-LT line contractors</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-700">
-                                <i data-lucide="check" class="w-5 h-5 text-primary"></i>
-                                <span>Precision-engineered materials</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-700">
-                                <i data-lucide="check" class="w-5 h-5 text-primary"></i>
-                                <span>Compliance with utility standards</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="order-2 lg:order-1">
-                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
-                            <i data-lucide="settings" class="w-8 h-8"></i>
-                        </div>
-                        <h2 class="text-3xl font-bold mb-4">Installation & Commissioning</h2>
-                        <p class="text-gray-600 text-lg mb-6">Professional setup, testing, and commissioning of all electrical systems. Our certified engineers ensure every installation meets manufacturer specifications and safety standards.</p>
-                        <div class="space-y-3">
-                            <div class="flex items-center gap-3 text-gray-700">
-                                <i data-lucide="check" class="w-5 h-5 text-primary"></i>
-                                <span>Factory-trained technicians</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-700">
-                                <i data-lucide="check" class="w-5 h-5 text-primary"></i>
-                                <span>Load testing before handover</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-700">
-                                <i data-lucide="check" class="w-5 h-5 text-primary"></i>
-                                <span>Documentation and training provided</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-1 lg:order-2 aspect-[4/3] rounded-2xl overflow-hidden img-zoom-container">
-                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop" alt="Installation and Commissioning" class="w-full h-full object-cover">
-                    </div>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden img-zoom-container">
-                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop" alt="Maintenance and Repairs" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop" alt="UPS Repair Service" class="w-full h-full object-cover">
                     </div>
                     <div>
                         <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
                             <i data-lucide="wrench" class="w-8 h-8"></i>
                         </div>
-                        <h2 class="text-3xl font-bold mb-4">Maintenance & Repair Contracts</h2>
-                        <p class="text-gray-600 text-lg mb-6">Long-term service support ensuring optimal performance and minimal downtime. Our AMC packages include preventive maintenance, emergency repairs, and spare parts management.</p>
-                        <div class="space-y-3">
+                        <h2 class="text-3xl font-bold mb-4">UPS Repair Services</h2>
+                        <p class="text-gray-600 text-lg mb-6">Professional diagnostics and component-level repair for online and industrial UPS systems (1KVA to 200KVA). Restore backup stability and resolve circuitry issues.</p>
+                        <div class="space-y-3 mb-6">
                             <div class="flex items-center gap-3 text-gray-700">
                                 <i data-lucide="check" class="w-5 h-5 text-primary"></i>
-                                <span>24/7 emergency response</span>
+                                <span>On-site circuit card testing</span>
                             </div>
                             <div class="flex items-center gap-3 text-gray-700">
                                 <i data-lucide="check" class="w-5 h-5 text-primary"></i>
-                                <span>Preventive maintenance schedules</span>
+                                <span>IGBT and motherboard repairs</span>
                             </div>
                             <div class="flex items-center gap-3 text-gray-700">
                                 <i data-lucide="check" class="w-5 h-5 text-primary"></i>
-                                <span>Genuine spare parts guarantee</span>
+                                <span>Genuine replacement parts</span>
                             </div>
                         </div>
+                        <a href="service-ups-repair.html" class="btn-primary">
+                            <i data-lucide="eye" class="w-5 h-5"></i>
+                            <span>Explore UPS Repair Details</span>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Service 5 -->
+                <!-- Service 7: UPS Maintenance -->
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="order-2 lg:order-1">
                         <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
-                            <i data-lucide="cpu" class="w-8 h-8"></i>
+                            <i data-lucide="activity" class="w-8 h-8"></i>
                         </div>
-                        <h2 class="text-3xl font-bold mb-4">Automation & Distribution Systems</h2>
-                        <p class="text-gray-600 text-lg mb-6">Modern control panels, PLC programming, and industrial automation solutions. We integrate smart systems that improve efficiency and provide real-time monitoring capabilities.</p>
-                        <div class="space-y-3">
+                        <h2 class="text-3xl font-bold mb-4">UPS Maintenance</h2>
+                        <p class="text-gray-600 text-lg mb-6">Scheduled preventive checks, battery health evaluations, cleanings, and system calibrations to prevent power drops and prolong system lifespans.</p>
+                        <div class="space-y-3 mb-6">
                             <div class="flex items-center gap-3 text-gray-700">
                                 <i data-lucide="check" class="w-5 h-5 text-primary"></i>
-                                <span>Custom control panel design</span>
+                                <span>Battery capacity load testing</span>
                             </div>
                             <div class="flex items-center gap-3 text-gray-700">
                                 <i data-lucide="check" class="w-5 h-5 text-primary"></i>
-                                <span>PLC and SCADA integration</span>
+                                <span>Cooling fans & ventilation cleaning</span>
                             </div>
                             <div class="flex items-center gap-3 text-gray-700">
                                 <i data-lucide="check" class="w-5 h-5 text-primary"></i>
-                                <span>Remote monitoring capabilities</span>
+                                <span>Electrical connection inspections</span>
                             </div>
                         </div>
+                        <a href="service-ups-maintenance.html" class="btn-primary">
+                            <i data-lucide="eye" class="w-5 h-5"></i>
+                            <span>Explore UPS Maintenance Details</span>
+                        </a>
                     </div>
                     <div class="order-1 lg:order-2 aspect-[4/3] rounded-2xl overflow-hidden img-zoom-container">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop" alt="Automation and control systems" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop" alt="UPS Maintenance Service" class="w-full h-full object-cover">
                     </div>
                 </div>
+
+                <!-- Service 8: Electrical Engineering -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden img-zoom-container">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop" alt="Electrical Contracting Substation" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
+                            <i data-lucide="settings" class="w-8 h-8"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-4">Electrical Engineering</h2>
+                        <p class="text-gray-600 text-lg mb-6">Comprehensive HT & LT transmission line designs, tower foundations installation, distribution panelboard layout, and industrial cable management contracting.</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center gap-3 text-gray-700">
+                                <i data-lucide="check" class="w-5 h-5 text-primary"></i>
+                                <span>HT-LT line planning & tower setup</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-700">
+                                <i data-lucide="check" class="w-5 h-5 text-primary"></i>
+                                <span>Distribution boards fabrication</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-700">
+                                <i data-lucide="check" class="w-5 h-5 text-primary"></i>
+                                <span>Grounding resistance audits</span>
+                            </div>
+                        </div>
+                        <a href="service-electrical-engineering.html" class="btn-primary">
+                            <i data-lucide="eye" class="w-5 h-5"></i>
+                            <span>Explore Engineering Details</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 9: AMC Services -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
+                            <i data-lucide="shield-check" class="w-8 h-8"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-4">Annual Maintenance Contracts (AMC)</h2>
+                        <p class="text-gray-600 text-lg mb-6">Reliable Annual Maintenance Contract (AMC) services to guarantee uninterruptible performance for UPS systems, voltage stabilizers, dry batteries, and electrical distribution lines.</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center gap-3 text-gray-700">
+                                <i data-lucide="check" class="w-5 h-5 text-primary"></i>
+                                <span>Scheduled periodic checkups</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-700">
+                                <i data-lucide="check" class="w-5 h-5 text-primary"></i>
+                                <span>24/7 priority emergency response</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-700">
+                                <i data-lucide="check" class="w-5 h-5 text-primary"></i>
+                                <span>Thermal diagnostics & reporting</span>
+                            </div>
+                        </div>
+                        <a href="service-amc-services.html" class="btn-primary">
+                            <i data-lucide="eye" class="w-5 h-5"></i>
+                            <span>Explore AMC Details</span>
+                        </a>
+                    </div>
+                    <div class="order-1 lg:order-2 aspect-[4/3] rounded-2xl overflow-hidden img-zoom-container">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop" alt="AMC Services datacenter" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
             </div>
         </section>
 
