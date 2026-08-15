@@ -236,12 +236,15 @@ body {
 /* Product Card */
 .product-card {
     background: white;
-    border: 1px solid #e5e5e5;
-    transition: all 0.4s ease;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 .product-card:hover {
+    transform: translateY(-6px);
     border-color: #ff6a00;
-    box-shadow: 0 15px 35px rgba(255, 106, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(255, 106, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 /* Form Input */
