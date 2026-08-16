@@ -9,19 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Fade out loader on page load
     if (loader) {
-        // Add a slight delay to ensure visual smoothness
         setTimeout(() => {
             loader.style.opacity = '0';
             setTimeout(() => {
                 loader.style.visibility = 'hidden';
-            }, 400); // matches the transition duration in CSS
-        }, 600);
+            }, 400);
+        }, 300); // reduced delay slightly for snappier feel
     }
 
     // Intercept internal page transitions to show loader
     document.querySelectorAll('a').forEach(link => {
         const href = link.getAttribute('href');
-        // Check if link is a local HTML page (and not a fragment identifier, external URL or telephone/whatsapp links)
         if (href && href.endsWith('.html') && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -30,11 +28,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     loader.style.opacity = '1';
                     setTimeout(() => {
                         window.location.href = href;
-                    }, 400); // Allow time for loader to fully fade in
+                    }, 350);
                 } else {
                     window.location.href = href;
                 }
             });
+        }
+    });
+
+    // Show loader on page reload or unload navigation
+    window.addEventListener('beforeunload', () => {
+        if (loader) {
+            loader.style.visibility = 'visible';
+            loader.style.opacity = '1';
+        }
+    });
+
+    // Handle bfcache (back/forward cache) loads
+    window.addEventListener('pageshow', (event) => {
+        if (loader) {
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.visibility = 'hidden';
+            }, 400);
         }
     });
 
