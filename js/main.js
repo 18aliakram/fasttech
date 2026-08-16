@@ -7,14 +7,14 @@ if (typeof lucide !== 'undefined') {
 document.addEventListener('DOMContentLoaded', () => {
     const loader = document.getElementById('loader');
     
-    // Fade out loader on page load after exactly 2 seconds
+    // Fade out loader on page load after exactly 1 second
     if (loader) {
         setTimeout(() => {
             loader.style.opacity = '0';
             setTimeout(() => {
                 loader.style.visibility = 'hidden';
             }, 400);
-        }, 2000);
+        }, 1000);
     }
 
     // Intercept internal page transitions to show loader
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     loader.style.visibility = 'hidden';
                 }, 400);
-            }, 2000);
+            }, 1000);
         }
     });
 
