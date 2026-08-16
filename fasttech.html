@@ -309,6 +309,8 @@
         .mobile-menu {
             transform: translateX(100%);
             transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            overflow-y: auto;
+            max-height: 100vh;
         }
         .mobile-menu.open {
             transform: translateX(0);
@@ -1693,17 +1695,6 @@
                 currentPage = page;
                 window.scrollTo({ top: 0 }); // instant scroll to top
                 
-                // Close mobile menu if navigating
-                const menu = document.getElementById('mobile-menu');
-                const overlay = document.getElementById('mobile-overlay');
-                const icon = document.getElementById('menu-icon');
-                if (menu && menu.classList.contains('open')) {
-                    menu.classList.remove('open');
-                    if (overlay) overlay.classList.add('hidden');
-                    if (icon) icon.setAttribute('data-lucide', 'menu');
-                    lucide.createIcons();
-                }
-                
                 // Update active nav state
                 document.querySelectorAll('.nav-link').forEach(link => {
                     link.classList.remove('text-primary');
@@ -1732,6 +1723,19 @@
             if (href && href.endsWith('.html') && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
+                    
+                    // Close mobile menu if clicked from there
+                    const menu = document.getElementById('mobile-menu');
+                    const overlay = document.getElementById('mobile-overlay');
+                    const icon = document.getElementById('menu-icon');
+                    if (menu && menu.classList.contains('open')) {
+                        menu.classList.remove('open');
+                        if (overlay) overlay.classList.add('hidden');
+                        if (icon) icon.setAttribute('data-lucide', 'menu');
+                        document.body.style.overflow = ''; // release scroll lock
+                        lucide.createIcons();
+                    }
+
                     const loader = document.getElementById('loader');
                     if (loader) {
                         loader.style.display = 'flex';
@@ -1753,14 +1757,18 @@
             const overlay = document.getElementById('mobile-overlay');
             const icon = document.getElementById('menu-icon');
             
+            if (!menu) return;
+
             if (menu.classList.contains('open')) {
                 menu.classList.remove('open');
-                overlay.classList.add('hidden');
-                icon.setAttribute('data-lucide', 'menu');
+                if (overlay) overlay.classList.add('hidden');
+                if (icon) icon.setAttribute('data-lucide', 'menu');
+                document.body.style.overflow = ''; // release scroll lock
             } else {
                 menu.classList.add('open');
-                overlay.classList.remove('hidden');
-                icon.setAttribute('data-lucide', 'x');
+                if (overlay) overlay.classList.remove('hidden');
+                if (icon) icon.setAttribute('data-lucide', 'x');
+                document.body.style.overflow = 'hidden'; // lock background scroll
             }
             lucide.createIcons();
         }
