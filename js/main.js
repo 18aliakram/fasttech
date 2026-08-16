@@ -7,14 +7,14 @@ if (typeof lucide !== 'undefined') {
 document.addEventListener('DOMContentLoaded', () => {
     const loader = document.getElementById('loader');
     
-    // Fade out loader on page load
+    // Fade out loader on page load after exactly 2 seconds
     if (loader) {
         setTimeout(() => {
             loader.style.opacity = '0';
             setTimeout(() => {
                 loader.style.visibility = 'hidden';
             }, 400);
-        }, 300); // reduced delay slightly for snappier feel
+        }, 2000);
     }
 
     // Intercept internal page transitions to show loader
@@ -47,10 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle bfcache (back/forward cache) loads
     window.addEventListener('pageshow', (event) => {
         if (loader) {
-            loader.style.opacity = '0';
+            loader.style.visibility = 'visible';
+            loader.style.opacity = '1';
             setTimeout(() => {
-                loader.style.visibility = 'hidden';
-            }, 400);
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.visibility = 'hidden';
+                }, 400);
+            }, 2000);
         }
     });
 
