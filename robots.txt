@@ -1,0 +1,6 @@
+# Allow all crawlers to access the site
+User-agent: *
+Allow: /
+
+# Reference the professional sitemap
+Sitemap: https://18aliakram.github.io/fasttech/sitemap.xml
