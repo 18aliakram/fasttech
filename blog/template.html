@@ -1,0 +1,533 @@
+<!--
+================================================================================
+FASTTECH BLOG ARTICLE MASTER TEMPLATE
+
+This is the master template for creating new blog articles. 
+Do NOT publish this template file directly.
+
+INSTRUCTIONS FOR THE SEO / CONTENT MANAGER:
+1. Copy this file (template.html).
+2. Rename it using a search-friendly slug (e.g., 'how-to-maintain-ups.html').
+3. Move/save the renamed copy inside the 'posts/' folder: /blog/posts/
+4. Open the new file and update all uppercase placeholders:
+   - Search for "YOUR_..." and replace with your article content, dates, and SEO tags.
+5. Upload featured images and in-article images to the 'images/' folder: /blog/images/
+6. Add the new blog card to the blog listing page: /blog/index.html
+7. Add the new article URL to sitemap.xml.
+8. Commit the changes to your GitHub repository. Netlify will auto-deploy.
+================================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO METADATA (Replace with your article details) -->
+    <title>YOUR_META_TITLE | FASTTECH</title>
+    <meta name="description" content="YOUR_META_DESCRIPTION">
+    <meta name="keywords" content="YOUR_KEYWORDS_COMMA_SEPARATED">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fasttech.com/blog/posts/YOUR_ARTICLE_SLUG.html">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="YOUR_OG_TITLE">
+    <meta property="og:description" content="YOUR_OG_DESCRIPTION">
+    <meta property="og:image" content="https://fasttech.com/blog/images/YOUR_FEATURED_IMAGE.jpg">
+    <meta property="og:url" content="https://fasttech.com/blog/posts/YOUR_ARTICLE_SLUG.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="YOUR_OG_TITLE">
+    <meta name="twitter:description" content="YOUR_OG_DESCRIPTION">
+    <meta name="twitter:image" content="https://fasttech.com/blog/images/YOUR_FEATURED_IMAGE.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="../../css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff6a00',
+                        'primary-dark': '#e55f00',
+                        dark: '#0a0a0a',
+                        'dark-light': '#1a1a1a',
+                        'gray-50': '#fafafa',
+                        'gray-100': '#f5f5f5',
+                        'gray-200': '#e5e5e5',
+                        'gray-800': '#262626',
+                        'gray-900': '#171717',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Structured Data JSON-LD (Update fields below) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "YOUR_BLOG_TITLE",
+      "description": "YOUR_META_DESCRIPTION",
+      "image": [
+        "https://fasttech.com/blog/images/YOUR_FEATURED_IMAGE.jpg"
+      ],
+      "datePublished": "YOUR_DATE_YYYY-MM-DD",
+      "dateModified": "YOUR_DATE_YYYY-MM-DD",
+      "author": {
+        "@type": "Organization",
+        "name": "FastTech"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FastTech",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://fasttech.com/Logo/fast_logo.png"
+        }
+      }
+    }
+    </script>
+
+    <!-- Critical Loader CSS -->
+    <style>
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            opacity: 1;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+        .loader-line {
+            width: 200px;
+            height: 2px;
+            background: #e5e5e5;
+            position: relative;
+            overflow: hidden;
+        }
+        .loader-line::after {
+            content: '';
+            position: absolute;
+            left: -50%;
+            width: 50%;
+            height: 100%;
+            background: #ff6a00;
+            animation: loaderSlide 1s ease-in-out infinite;
+        }
+        @keyframes loaderSlide {
+            0% { left: -50%; }
+            100% { left: 100%; }
+        }
+    </style>
+</head>
+<body class="antialiased page-fade-in bg-gray-50">
+
+    <!-- Loader -->
+    <div id="loader">
+        <img src="../../Logo/fast_logo.png" alt="FAST TECH Logo" class="h-16 w-auto object-contain mb-4">
+        <div class="loader-line"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="../../index.html" class="flex items-center group">
+                    <img src="../../Logo/fast_logo.png" alt="FAST TECH Logo" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105 duration-300">
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="../../index.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
+                        Home
+                    </a>
+                    <a href="../../about.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
+                        About Us
+                    </a>
+                    
+                    <!-- Products Dropdown -->
+                    <div class="relative group/dropdown">
+                        <a href="../../products.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative flex items-center gap-1 py-2">
+                            Products
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover/dropdown:rotate-180"></i>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-150 rounded-lg shadow-xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 z-50 py-2">
+                            <a href="../../product-dry-gel-battery.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">DRY Gel Battery Solutions</a>
+                            <a href="../../product-lithium-batteries.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Lithium Batteries</a>
+                            <a href="../../product-lt-ht-overhead.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">LT-HT Over-Head Material</a>
+                            <a href="../../product-online-ups.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Online UPS</a>
+                            <a href="../../product-din-rail-power.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Din Rail Power Supply</a>
+                            <a href="../../product-panel-dbs-cable-trays.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Panel DBs & Cable Trays</a>
+                            <a href="../../product-servo-stabilizers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Servo Motor Stabilizers</a>
+                            <a href="../../product-street-lighting.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Street & Flood Lighting</a>
+                            <a href="../../product-automotive-filters.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Automotive & Genset Filters</a>
+                            <div class="border-t border-gray-100 my-1"></div>
+                            <a href="../../products.html" class="block px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/5 transition-colors">View All Products</a>
+                        </div>
+                    </div>
+
+                    <!-- Services Dropdown -->
+                    <div class="relative group/dropdown">
+                        <a href="../../services.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative flex items-center gap-1 py-2">
+                            Services
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover/dropdown:rotate-180"></i>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-150 rounded-lg shadow-xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 z-50 py-2">
+                            <a href="../../service-ups-repair.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">UPS Repair Services</a>
+                            <a href="../../service-ups-maintenance.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">UPS Maintenance Services</a>
+                            <a href="../../service-electrical-engineering.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Electrical Engineering</a>
+                            <a href="../../service-amc-services.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">AMC Services</a>
+                            <div class="border-t border-gray-100 my-1"></div>
+                            <a href="../../services.html" class="block px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/5 transition-colors">View All Services</a>
+                        </div>
+                    </div>
+                    
+                    <a href="../index.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group active">
+                        Blog
+                    </a>
+
+                    <a href="../../contact.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- CTA & Mobile Toggle -->
+                <div class="flex items-center gap-4">
+                    <a href="tel:+923224462686" class="hidden md:flex btn-primary text-sm py-2.5 px-5">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        <span>Call Now</span>
+                    </a>
+                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-dark hover:text-primary transition-colors">
+                        <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-80 bg-white z-50 shadow-2xl p-8 lg:hidden">
+        <div class="flex justify-between items-center mb-12">
+            <span class="font-bold text-xl">Menu</span>
+            <button onclick="toggleMobileMenu()" class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="flex flex-col gap-6">
+            <a href="../../index.html" class="text-lg font-medium hover:text-primary transition-colors">Home</a>
+            <a href="../../about.html" class="text-lg font-medium hover:text-primary transition-colors">About Us</a>
+            
+            <!-- Mobile Products Collapsible -->
+            <div class="flex flex-col gap-2">
+                <button onclick="toggleMobileDropdown('mobile-products-submenu')" class="flex justify-between items-center text-lg font-medium text-left hover:text-primary transition-colors w-full">
+                    <span>Products</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200" id="mobile-products-arrow"></i>
+                </button>
+                <div id="mobile-products-submenu" class="hidden flex-col gap-3 pl-4 border-l border-gray-200 mt-2">
+                    <a href="../../product-dry-gel-battery.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">DRY Gel Battery Solutions</a>
+                    <a href="../../product-lithium-batteries.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Lithium Batteries</a>
+                    <a href="../../product-lt-ht-overhead.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">LT-HT Over-Head Material</a>
+                    <a href="../../product-online-ups.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Online UPS</a>
+                    <a href="../../product-din-rail-power.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Din Rail Power Supply</a>
+                    <a href="../../product-panel-dbs-cable-trays.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Panel DBs & Cable Trays</a>
+                    <a href="../../product-servo-stabilizers.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Servo Motor Stabilizers</a>
+                    <a href="../../product-street-lighting.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Street & Flood Lighting</a>
+                    <a href="../../product-automotive-filters.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Automotive & Genset Filters</a>
+                    <a href="../../products.html" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors pt-1">All Products Catalog</a>
+                </div>
+            </div>
+
+            <!-- Mobile Services Collapsible -->
+            <div class="flex flex-col gap-2">
+                <button onclick="toggleMobileDropdown('mobile-services-submenu', 'mobile-services-arrow')" class="flex justify-between items-center text-lg font-medium text-left hover:text-primary transition-colors w-full">
+                    <span>Services</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200" id="mobile-services-arrow"></i>
+                </button>
+                <div id="mobile-services-submenu" class="hidden flex-col gap-3 pl-4 border-l border-gray-200 mt-2">
+                    <a href="../../service-ups-repair.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">UPS Repair Services</a>
+                    <a href="../../service-ups-maintenance.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">UPS Maintenance Services</a>
+                    <a href="../../service-electrical-engineering.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">Electrical Engineering</a>
+                    <a href="../../service-amc-services.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">AMC Services</a>
+                    <a href="../../services.html" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors pt-1">All Services Overview</a>
+                </div>
+            </div>
+            <a href="../index.html" class="text-lg font-medium hover:text-primary transition-colors text-primary">Blog</a>
+            <a href="../../contact.html" class="text-lg font-medium hover:text-primary transition-colors">Contact Us</a>
+        </div>
+        <div class="mt-12 pt-8 border-t border-gray-200">
+            <div class="text-sm text-gray-500 mb-2">Call us directly</div>
+            <a href="tel:+923224462686" class="text-xl font-bold text-primary">+92 322 4462686</a>
+        </div>
+    </div>
+    <div id="mobile-overlay" onclick="toggleMobileMenu()" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden backdrop-blur-sm"></div>
+
+    <!-- Main Content Area -->
+    <main class="pt-32 pb-24">
+        <article class="max-w-4xl mx-auto px-4 sm:px-6">
+            
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center text-xs text-gray-400 gap-2 mb-6" aria-label="Breadcrumb">
+                <a href="../../index.html" class="hover:text-primary transition-colors">Home</a>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                <a href="../index.html" class="hover:text-primary transition-colors">Blog</a>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                <span class="text-gray-650 font-medium truncate">YOUR_BLOG_TITLE</span>
+            </nav>
+
+            <!-- Article Header -->
+            <header class="mb-10">
+                <span class="bg-primary/10 text-primary text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                    YOUR_CATEGORY
+                </span>
+                
+                <h1 class="text-3xl md:text-5xl font-black text-dark mt-4 mb-6 leading-tight">
+                    YOUR_BLOG_TITLE
+                </h1>
+                
+                <div class="flex flex-wrap items-center gap-6 text-sm text-gray-500 pt-4 border-t border-gray-200">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-primary"></i>
+                        <time datetime="YOUR_DATE_YYYY-MM-DD">YOUR_DATE_LONG_FORMAT</time>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="user" class="w-4 h-4 text-primary"></i>
+                        <span>By YOUR_AUTHOR</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Featured Image -->
+            <div class="rounded-2xl overflow-hidden mb-12 shadow-md">
+                <img src="../images/YOUR_FEATURED_IMAGE.jpg" alt="YOUR_IMAGE_ALT_TEXT" class="w-full h-auto object-cover max-h-[480px]">
+            </div>
+
+            <!-- Content Area -->
+            <!-- Note: max-w-3xl prose maintains optimal readability with a centered single column -->
+            <div class="prose prose-lg max-w-3xl mx-auto text-gray-700 leading-relaxed space-y-6">
+                
+                <!-- 
+                ================================================================
+                YOUR ARTICLE CONTENT GOES HERE
+                Use paragraph tags <p>, section headers <h2> / <h3>, lists, and 
+                blockquotes. Follow the examples below for styles.
+                ================================================================
+                -->
+                
+                <p class="text-xl text-gray-600 leading-relaxed font-normal">
+                    YOUR_LEAD_PARAGRAPH
+                </p>
+
+                <h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+                    YOUR_FIRST_SECTION_HEADING
+                </h2>
+                
+                <p>
+                    YOUR_SECTION_CONTENT
+                </p>
+
+                <ul class="list-disc pl-6 space-y-2 my-6">
+                    <li>List item number one with key technical data.</li>
+                    <li>List item number two highlighting specifications.</li>
+                    <li>List item number three summarizing recommendations.</li>
+                </ul>
+
+                <blockquote class="border-l-4 border-primary bg-primary/5 p-6 rounded-r-lg font-medium text-dark-light italic my-8">
+                    "This is an example blockquote for emphasizing a critical technical takeaway, customer quote, or industry standard."
+                </blockquote>
+
+                <h3 class="text-xl font-bold text-dark pt-4 mt-6 mb-3">
+                    YOUR_SUBSECTION_HEADING
+                </h3>
+                
+                <p>
+                    YOUR_SUBSECTION_CONTENT
+                </p>
+
+                <!-- In-Article Image Support Example -->
+                <div class="my-8 rounded-xl overflow-hidden shadow-sm">
+                    <img src="../images/YOUR_OPTIONAL_CONTENT_IMAGE.jpg" alt="YOUR_OPTIONAL_IMAGE_ALT" class="w-full h-auto" loading="lazy">
+                    <span class="block text-center text-xs text-gray-400 mt-2">Figure 1: Descriptive caption explaining the technical diagram or chart.</span>
+                </div>
+
+                <p>
+                    YOUR_CONCLUDING_PARAGRAPH
+                </p>
+                
+            </div>
+
+            <!-- FAQ Section (Optional: Remove if not applicable) -->
+            <section class="max-w-3xl mx-auto mt-16 pt-10 border-t border-gray-200">
+                <h2 class="text-2xl font-bold text-dark mb-6">Frequently Asked Questions</h2>
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-dark mb-2 text-lg">YOUR_FAQ_QUESTION_1?</h3>
+                        <p class="text-gray-650 text-sm leading-relaxed">YOUR_FAQ_ANSWER_1</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-dark mb-2 text-lg">YOUR_FAQ_QUESTION_2?</h3>
+                        <p class="text-gray-650 text-sm leading-relaxed">YOUR_FAQ_ANSWER_2</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- B2B Service Call-to-Action (CTA) -->
+            <section class="max-w-3xl mx-auto mt-16 p-8 bg-dark text-white rounded-2xl shadow-xl relative overflow-hidden">
+                <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none transform translate-x-12 translate-y-12">
+                    <i data-lucide="activity" class="w-72 h-72 text-primary"></i>
+                </div>
+                <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
+                    <div class="max-w-md">
+                        <span class="text-primary font-semibold text-sm uppercase tracking-wider">FastTech Support & Services</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-3">Need Professional UPS Support?</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">FastTech provides certified UPS repair, preventative maintenance diagnostics, load testing, and comprehensive power audits across Pakistan.</p>
+                    </div>
+                    <div>
+                        <a href="../../contact.html" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-bold transition-all whitespace-nowrap shadow-lg">
+                            <i data-lucide="phone-call" class="w-4 h-4"></i>
+                            <span>Contact FastTech</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Related Articles (Manually managed links) -->
+            <section class="max-w-3xl mx-auto mt-20 pt-10 border-t border-gray-200 related-articles">
+                <h2 class="text-2xl font-bold text-dark mb-6">Related Articles</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 related-grid">
+                    
+                    <!-- Related Article 1 -->
+                    <div class="bg-white rounded-lg border border-gray-200 overflow-hidden flex flex-col hover:border-primary/45 transition-colors">
+                        <a href="how-often-should-an-industrial-ups-be-serviced.html" class="block h-40 overflow-hidden">
+                            <img src="../images/ups-maintenance.jpg" alt="Industrial UPS diagnostic maintenance" class="w-full h-full object-cover">
+                        </a>
+                        <div class="p-4 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-[10px] font-semibold text-primary uppercase">UPS Maintenance</span>
+                                <h4 class="font-bold text-sm text-dark mt-1 hover:text-primary transition-colors">
+                                    <a href="how-often-should-an-industrial-ups-be-serviced.html">How Often Should an Industrial UPS Be Serviced?</a>
+                                </h4>
+                            </div>
+                            <time datetime="2026-08-22" class="text-[10px] text-gray-400 block mt-4">August 22, 2026</time>
+                        </div>
+                    </div>
+                    
+                    <!-- Add more manually updated related articles here -->
+
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-20 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <a href="../../index.html" class="inline-block mb-6">
+                        <img src="../../Logo/fast_logo.png" alt="FAST TECH Logo" class="h-10 w-auto object-contain footer-logo">
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed">Powering Pakistan's industries with reliable energy solutions, electrical contracting, and premium power products since 2010.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="../../index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="../../about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="../../products.html" class="hover:text-primary transition-colors">Products</a></li>
+                        <li><a href="../../services.html" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="../index.html" class="hover:text-primary transition-colors text-primary font-medium">Blog</a></li>
+                        <li><a href="../../contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">Products</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="../../product-online-ups.html" class="hover:text-primary transition-colors">Online UPS</a></li>
+                        <li><a href="../../product-dry-gel-battery.html" class="hover:text-primary transition-colors">Dry Batteries</a></li>
+                        <li><a href="../../product-lithium-batteries.html" class="hover:text-primary transition-colors">Lithium Batteries</a></li>
+                        <li><a href="../../product-lt-ht-overhead.html" class="hover:text-primary transition-colors">LT-HT Materials</a></li>
+                        <li><a href="../../product-din-rail-power.html" class="hover:text-primary transition-colors">DIN Rail Supplies</a></li>
+                        <li><a href="../../product-panel-dbs-cable-trays.html" class="hover:text-primary transition-colors">Panel DBs & Trays</a></li>
+                        <li><a href="../../product-street-lighting.html" class="hover:text-primary transition-colors">Street & Flood Lighting</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">Contact</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"></i>
+                            <span>Lahore, Pakistan</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-primary flex-shrink-0"></i>
+                            <a href="tel:+923224462686" class="hover:text-primary transition-colors">+92 322 4462686</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-primary flex-shrink-0"></i>
+                            <a href="mailto:fastech.eng@gmail.com" class="hover:text-primary transition-colors">fastech.eng@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section-divider mb-8"></div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2026 FAST TECH Engineering Services. All rights reserved.</p>
+                <p>Engineering Excellence Since 2010</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923224462686" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+    </a>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-24 left-1/2 -translate-x-1/2 bg-dark text-white px-6 py-3 rounded-lg shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center gap-3">
+        <i data-lucide="check-circle" class="w-5 h-5 text-primary"></i>
+        <span id="toast-message">Message sent successfully!</span>
+    </div>
+
+    <!-- Script link -->
+    <script src="../../js/main.js" defer></script>
+</body>
+</html>

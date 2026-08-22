@@ -119,4 +119,26 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- 
+  ================================================================
+  FASTTECH BLOG SITEMAP ENTRIES
+  Add new blog articles here when publishing. 
+  Keep changefreq="monthly" and priority="0.8" for articles,
+  and changefreq="weekly" and priority="0.9" for the main blog index.
+  ================================================================
+  -->
+  <url>
+    <loc>https://18aliakram.github.io/fasttech/blog/index.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://18aliakram.github.io/fasttech/blog/posts/how-often-should-an-industrial-ups-be-serviced.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
+
