@@ -1,6 +1,7 @@
-# Allow all crawlers to access the site
+# FAST TECH Engineering Services - Robots.txt
+
 User-agent: *
 Allow: /
 
-# Reference the professional sitemap
-Sitemap: https://18aliakram.github.io/fasttech/sitemap.xml
+# XML Sitemap
+Sitemap: https://fasttecheng.com/sitemap.xml
