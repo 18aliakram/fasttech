@@ -1,0 +1,836 @@
+<!--
+================================================================================
+FASTTECH BLOG ARTICLE MASTER TEMPLATE
+
+This is the master template for creating new blog articles. 
+Do NOT publish this template file directly.
+
+INSTRUCTIONS FOR THE SEO / CONTENT MANAGER:
+1. Copy this file (template.html).
+2. Rename it using a search-friendly slug (e.g., 'how-to-maintain-ups.html').
+3. Move/save the renamed copy inside the 'posts/' folder: /blog/posts/
+4. Open the new file and update all uppercase placeholders:
+   - Search for "YOUR_..." and replace with your article content, dates, and SEO tags.
+5. Upload featured images and in-article images to the 'images/' folder: /blog/images/
+6. Add the new blog card to the blog listing page: /blog/index.html
+7. Add the new article URL to sitemap.xml.
+8. Commit the changes to your GitHub repository. Netlify will auto-deploy.
+================================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO METADATA (Replace with your article details) -->
+    <title>Dry Battery Price in Pakistan | FASTTECH | FASTTECH</title>
+    <meta name="description" content="Explore dry battery prices in Pakistan by capacity, including 12V, 100Ah, 150Ah and 200Ah options for UPS, solar and industrial use.">
+    <meta name="keywords" content="dry battery price in Pakistan, dry battery price Pakistan, dry gel battery price in Pakistan, dry battery for UPS, UPS battery price in Pakistan, 12V dry battery, 100Ah dry battery, 150Ah dry battery, 200Ah dry battery, dry battery for solar system, dry battery suppliers in Pakistan">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fasttecheng.com/blog/posts/dry-battery-price-in-pakistan.html">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Dry Battery Price in Pakistan | FASTTECH">
+    <meta property="og:description" content="Explore dry battery options by capacity for UPS, solar, telecom and industrial applications in Pakistan. Request current availability and pricing from FASTTECH.">
+    <meta property="og:image" content="https://fasttecheng.com/blog/images/dry-battery-price-in-pakistan.jpg">
+    <meta property="og:url" content="https://fasttecheng.com/blog/posts/dry-battery-price-in-pakistan.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dry Battery Price in Pakistan | FASTTECH">
+    <meta name="twitter:description" content="Explore dry battery options by capacity for UPS, solar, telecom and industrial applications in Pakistan. Request current availability and pricing from FASTTECH.">
+    <meta name="twitter:image" content="https://fasttecheng.com/blog/images/dry-battery-price-in-pakistan.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="../../css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff6a00',
+                        'primary-dark': '#e55f00',
+                        dark: '#0a0a0a',
+                        'dark-light': '#1a1a1a',
+                        'gray-50': '#fafafa',
+                        'gray-100': '#f5f5f5',
+                        'gray-200': '#e5e5e5',
+                        'gray-800': '#262626',
+                        'gray-900': '#171717',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Structured Data JSON-LD (Update fields below) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Dry Battery Price in Pakistan: Complete Guide by Capacity",
+      "description": "Explore dry battery prices in Pakistan by capacity, including 12V, 100Ah, 150Ah and 200Ah options for UPS, solar and industrial use.",
+      "image": [
+        "https://fasttecheng.com/blog/images/dry-battery-price-in-pakistan.jpg"
+      ],
+      "datePublished": "2026-08-27",
+      "dateModified": "2026-08-27",
+      "author": {
+        "@type": "Organization",
+        "name": "FastTech"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FastTech",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://fasttecheng.com/Logo/fast_logo.png"
+        }
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the dry battery price in Pakistan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dry battery prices in Pakistan vary according to capacity, voltage, brand, technology, availability, and application. FAST TECH recommends confirming the current price against the required battery specification and quantity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which dry battery is best for UPS in Pakistan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The best dry battery for a UPS depends on the UPS model, DC voltage, connected load, required backup time, and battery-bank configuration. The battery should match the UPS manufacturer's specifications."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a 12V dry battery used for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 12V dry battery can be used in smaller UPS systems, security equipment, telecom equipment, emergency backup systems, and other applications requiring 12V DC energy storage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a dry gel battery suitable for solar systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Suitable dry gel batteries can be used for solar backup and energy-storage applications when the battery voltage, capacity, charging requirements, and operating characteristics match the solar system."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I choose the correct battery capacity for my UPS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Battery capacity should be selected according to UPS load, required backup time, system DC voltage, battery technology, and manufacturer specifications. Professional sizing is recommended for commercial and industrial UPS systems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can dry batteries be used for industrial UPS systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Suitable high-capacity dry gel batteries can be used for industrial UPS applications when their voltage, capacity, discharge characteristics, and other specifications are compatible with the UPS system."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which dry battery brands does FAST TECH offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FAST TECH Engineering Services lists dry gel battery brands including LEOCH, VISION, NARADA, and LONG."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I buy dry batteries in Pakistan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FAST TECH Engineering Services supplies dry gel batteries for UPS, solar, telecom, and industrial applications and can provide product availability and quotation information."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Critical Loader CSS -->
+    <style>
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            opacity: 1;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+        .loader-line {
+            width: 200px;
+            height: 2px;
+            background: #e5e5e5;
+            position: relative;
+            overflow: hidden;
+        }
+        .loader-line::after {
+            content: '';
+            position: absolute;
+            left: -50%;
+            width: 50%;
+            height: 100%;
+            background: #ff6a00;
+            animation: loaderSlide 1s ease-in-out infinite;
+        }
+        @keyframes loaderSlide {
+            0% { left: -50%; }
+            100% { left: 100%; }
+        }
+    </style>
+</head>
+<body class="antialiased page-fade-in bg-gray-50">
+
+    <!-- Loader -->
+    <div id="loader">
+        <img src="../../Logo/fast_logo.png" alt="FAST TECH Logo" class="h-16 w-auto object-contain mb-4">
+        <div class="loader-line"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="../../index.html" class="flex items-center group">
+                    <img src="../../Logo/fast_logo.png" alt="FAST TECH Logo" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105 duration-300">
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="../../index.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
+                        Home
+                    </a>
+                    <a href="../../about.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
+                        About Us
+                    </a>
+                    
+                    <!-- Products Dropdown -->
+                    <div class="relative group/dropdown">
+                        <a href="../../products.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative flex items-center gap-1 py-2">
+                            Products
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover/dropdown:rotate-180"></i>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-150 rounded-lg shadow-xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 z-50 py-2">
+                            <a href="../../product-dry-gel-battery.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">DRY Gel Battery Solutions</a>
+                            <a href="../../product-lithium-batteries.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Lithium Batteries</a>
+                            <a href="../../product-lt-ht-overhead.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">LT-HT Over-Head Material</a>
+                            <a href="../../product-online-ups.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Online UPS</a>
+                            <a href="../../product-din-rail-power.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Din Rail Power Supply</a>
+                            <a href="../../product-panel-dbs-cable-trays.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Panel DBs & Cable Trays</a>
+                            <a href="../../product-servo-stabilizers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Servo Motor Stabilizers</a>
+                            <a href="../../product-street-lighting.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Street & Flood Lighting</a>
+                            <a href="../../product-automotive-filters.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Automotive & Genset Filters</a>
+                            <div class="border-t border-gray-100 my-1"></div>
+                            <a href="../../products.html" class="block px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/5 transition-colors">View All Products</a>
+                        </div>
+                    </div>
+
+                    <!-- Services Dropdown -->
+                    <div class="relative group/dropdown">
+                        <a href="../../services.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative flex items-center gap-1 py-2">
+                            Services
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover/dropdown:rotate-180"></i>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-150 rounded-lg shadow-xl opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 z-50 py-2">
+                            <a href="../../service-ups-repair.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">UPS Repair Services</a>
+                            <a href="../../service-ups-maintenance.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">UPS Maintenance Services</a>
+                            <a href="../../service-electrical-engineering.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">Electrical Engineering</a>
+                            <a href="../../service-amc-services.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors">AMC Services</a>
+                            <div class="border-t border-gray-100 my-1"></div>
+                            <a href="../../services.html" class="block px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/5 transition-colors">View All Services</a>
+                        </div>
+                    </div>
+                    
+
+                    <a href="../../contact.html" class="nav-link text-sm font-medium text-gray-800 hover:text-primary transition-colors relative group">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- CTA & Mobile Toggle -->
+                <div class="flex items-center gap-4">
+                    <a href="tel:+923224462686" class="hidden md:flex btn-primary text-sm py-2.5 px-5">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        <span>Call Now</span>
+                    </a>
+                    <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-dark hover:text-primary transition-colors">
+                        <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-80 bg-white z-50 shadow-2xl p-8 lg:hidden">
+        <div class="flex justify-between items-center mb-12">
+            <span class="font-bold text-xl">Menu</span>
+            <button onclick="toggleMobileMenu()" class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="flex flex-col gap-6">
+            <a href="../../index.html" class="text-lg font-medium hover:text-primary transition-colors">Home</a>
+            <a href="../../about.html" class="text-lg font-medium hover:text-primary transition-colors">About Us</a>
+            
+            <!-- Mobile Products Collapsible -->
+            <div class="flex flex-col gap-2">
+                <button onclick="toggleMobileDropdown('mobile-products-submenu')" class="flex justify-between items-center text-lg font-medium text-left hover:text-primary transition-colors w-full">
+                    <span>Products</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200" id="mobile-products-arrow"></i>
+                </button>
+                <div id="mobile-products-submenu" class="hidden flex-col gap-3 pl-4 border-l border-gray-200 mt-2">
+                    <a href="../../product-dry-gel-battery.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">DRY Gel Battery Solutions</a>
+                    <a href="../../product-lithium-batteries.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Lithium Batteries</a>
+                    <a href="../../product-lt-ht-overhead.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">LT-HT Over-Head Material</a>
+                    <a href="../../product-online-ups.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Online UPS</a>
+                    <a href="../../product-din-rail-power.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Din Rail Power Supply</a>
+                    <a href="../../product-panel-dbs-cable-trays.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Panel DBs & Cable Trays</a>
+                    <a href="../../product-servo-stabilizers.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Servo Motor Stabilizers</a>
+                    <a href="../../product-street-lighting.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Street & Flood Lighting</a>
+                    <a href="../../product-automotive-filters.html" class="text-sm font-medium text-gray-650 hover:text-primary transition-colors">Automotive & Genset Filters</a>
+                    <a href="../../products.html" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors pt-1">All Products Catalog</a>
+                </div>
+            </div>
+
+            <!-- Mobile Services Collapsible -->
+            <div class="flex flex-col gap-2">
+                <button onclick="toggleMobileDropdown('mobile-services-submenu', 'mobile-services-arrow')" class="flex justify-between items-center text-lg font-medium text-left hover:text-primary transition-colors w-full">
+                    <span>Services</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200" id="mobile-services-arrow"></i>
+                </button>
+                <div id="mobile-services-submenu" class="hidden flex-col gap-3 pl-4 border-l border-gray-200 mt-2">
+                    <a href="../../service-ups-repair.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">UPS Repair Services</a>
+                    <a href="../../service-ups-maintenance.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">UPS Maintenance Services</a>
+                    <a href="../../service-electrical-engineering.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">Electrical Engineering</a>
+                    <a href="../../service-amc-services.html" class="text-sm font-medium text-gray-655 hover:text-primary transition-colors">AMC Services</a>
+                    <a href="../../services.html" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors pt-1">All Services Overview</a>
+                </div>
+            </div>
+            <a href="../../contact.html" class="text-lg font-medium hover:text-primary transition-colors">Contact Us</a>
+        </div>
+        <div class="mt-12 pt-8 border-t border-gray-200">
+            <div class="text-sm text-gray-500 mb-2">Call us directly</div>
+            <a href="tel:+923224462686" class="text-xl font-bold text-primary">+92 322 4462686</a>
+        </div>
+    </div>
+    <div id="mobile-overlay" onclick="toggleMobileMenu()" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden backdrop-blur-sm"></div>
+
+    <!-- Main Content Area -->
+    <main class="pt-32 pb-24">
+        <article class="max-w-4xl mx-auto px-4 sm:px-6">
+            
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center text-xs text-gray-400 gap-2 mb-6" aria-label="Breadcrumb">
+                <a href="../../index.html" class="hover:text-primary transition-colors">Home</a>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                <a href="../index.html" class="hover:text-primary transition-colors">Blog</a>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                <span class="text-gray-650 font-medium truncate">Dry Battery Price in Pakistan: Complete Guide by Capacity</span>
+            </nav>
+
+            <!-- Article Header -->
+            <header class="mb-10">
+                <span class="bg-primary/10 text-primary text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                    Power Solutions
+                </span>
+                
+                <h1 class="text-3xl md:text-5xl font-black text-dark mt-4 mb-6 leading-tight">
+                    Dry Battery Price in Pakistan: Complete Guide by Capacity
+                </h1>
+                
+                <div class="flex flex-wrap items-center gap-6 text-sm text-gray-500 pt-4 border-t border-gray-200">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-primary"></i>
+                        <time datetime="2026-08-27">August 27, 2026</time>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="user" class="w-4 h-4 text-primary"></i>
+                        <span>By FAST TECH Engineering Services</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Featured Image -->
+            <div class="rounded-2xl overflow-hidden mb-12 shadow-md">
+                <img src="../images/dry-battery-price-in-pakistan.jpg" alt="Dry gel batteries for UPS and industrial power systems in Pakistan" class="w-full h-auto object-cover max-h-[480px]">
+            </div>
+
+            <!-- Content Area -->
+            <!-- Note: max-w-3xl prose maintains optimal readability with a centered single column -->
+            <div class="prose prose-lg max-w-3xl mx-auto text-gray-700 leading-relaxed space-y-6">
+                
+                <!-- 
+                ================================================================
+                YOUR ARTICLE CONTENT GOES HERE
+                Use paragraph tags <p>, section headers <h2> / <h3>, lists, and 
+                blockquotes. Follow the examples below for styles.
+                ================================================================
+                -->
+                
+                <p class="text-xl text-gray-600 leading-relaxed font-normal">
+    If you are searching for the <strong>dry battery price in Pakistan</strong>, the right battery depends on more than price alone. Capacity, voltage, battery technology, brand, application, backup requirement, and compatibility with your UPS or solar system all affect the correct choice. FAST TECH Engineering Services supplies dry gel batteries in Pakistan for UPS systems, solar applications, telecom equipment, and industrial power systems.
+</p>
+
+<p>
+    FAST TECH offers dry gel battery solutions from established brands including LEOCH, VISION, NARADA, and LONG. Battery availability and pricing can vary according to capacity, brand, specifications, and current market conditions, so customers should confirm the latest price and specification before purchasing.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    Dry Battery Price in Pakistan
+</h2>
+
+<p>
+    The <strong>dry battery price in Pakistan</strong> varies according to battery capacity, voltage, technology, brand, and intended application. Smaller batteries used for compact UPS systems and emergency backup normally have different pricing from high-capacity batteries used for industrial UPS systems, solar backup, telecom installations, and other demanding applications.
+</p>
+
+<p>
+    For larger systems, the total battery-bank cost also depends on how many batteries are required to achieve the required DC voltage and backup capacity. An industrial UPS may require multiple batteries connected together, so the price of one battery does not necessarily represent the total cost of the complete backup system.
+</p>
+
+<p>
+    If you need a specific capacity such as a 12V battery, 100Ah battery, 150Ah battery, or 200Ah battery, FAST TECH can help you identify a suitable option according to your equipment and power requirements. For current pricing and availability, <a href="../contact.html" class="text-primary font-semibold hover:underline">contact FAST TECH for a quotation</a>.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    What Is a Dry Battery?
+</h2>
+
+<p>
+    A dry battery used for UPS and industrial backup applications is generally a sealed or maintenance-free battery designed to provide stored electrical energy without the routine water topping associated with traditional flooded batteries. Dry gel batteries are particularly useful where reliable backup power and reduced routine maintenance are important.
+</p>
+
+<p>
+    Dry gel batteries can be used in UPS systems, solar backup systems, telecom installations, security systems, and industrial applications. The correct battery should always be selected according to the equipment manufacturer's specifications, charging requirements, operating environment, and required backup performance.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    Dry Battery for UPS Systems
+</h2>
+
+<p>
+    One of the most common applications for dry batteries is <strong>UPS backup power</strong>. A UPS uses its battery bank to provide electrical power when the primary electricity supply fails or becomes unstable. The required battery capacity depends on the UPS rating, connected load, required backup time, DC voltage, and system configuration.
+</p>
+
+<p>
+    FAST TECH supplies <a href="../product-dry-gel-battery.html" class="text-primary font-semibold hover:underline">dry gel batteries for UPS systems</a> and other backup applications. For customers replacing batteries in an existing system, the original UPS specifications should be checked before selecting a replacement battery.
+</p>
+
+<p>
+    Businesses that need a complete backup solution can also review FAST TECH's <a href="../product-online-ups.html" class="text-primary font-semibold hover:underline">online UPS systems</a>, which are designed for applications requiring continuous power protection and stable backup performance.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    Dry Battery Capacity Explained
+</h2>
+
+<p>
+    Battery capacity is commonly expressed in <strong>ampere-hours (Ah)</strong>. It indicates the amount of electrical charge a battery can theoretically deliver under specified conditions. Common capacities range from smaller batteries for compact backup applications to higher-capacity batteries such as 100Ah, 150Ah, and 200Ah for larger UPS, solar, telecom, and industrial systems.
+</p>
+
+<p>
+    Ah capacity should not be considered in isolation. Two batteries with the same Ah rating can have different performance characteristics because of differences in battery technology, construction, discharge conditions, operating temperature, charging conditions, and manufacturer specifications.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    12V Dry Battery
+</h2>
+
+<p>
+    A <strong>12V dry battery</strong> is commonly used in smaller UPS systems, emergency backup equipment, security systems, telecommunications equipment, and other low-voltage applications. The correct 12V battery capacity depends on the equipment and required backup duration.
+</p>
+
+<p>
+    Before purchasing a 12V dry battery, check the required voltage, Ah rating, physical dimensions, terminal configuration, charging requirements, and compatibility with the existing equipment. A 12V 7Ah battery, for example, has a very different application from a 12V 100Ah battery even though both have the same nominal voltage.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    100Ah Dry Battery
+</h2>
+
+<p>
+    A <strong>100Ah dry battery</strong> provides greater nominal storage capacity than smaller UPS batteries and may be suitable for larger backup requirements. Depending on the system configuration, 100Ah batteries can be used for UPS backup, solar energy storage, telecom applications, and industrial power systems.
+</p>
+
+<p>
+    When multiple batteries are required, the final battery-bank configuration must be calculated according to the equipment's DC voltage and required backup capacity. FAST TECH can help customers identify the appropriate configuration for their application.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    150Ah Dry Battery
+</h2>
+
+<p>
+    A <strong>150Ah dry battery</strong> provides greater nominal storage capacity and can be considered for larger backup applications. These batteries may be suitable for larger UPS systems, solar backup installations, telecom applications, and industrial power requirements where additional energy storage is required.
+</p>
+
+<p>
+    The correct battery should be selected according to the complete system rather than capacity alone. UPS voltage, load, backup duration, charging system, installation environment, and battery specifications should all be considered before purchase.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    200Ah Dry Battery
+</h2>
+
+<p>
+    A <strong>200Ah dry battery</strong> is intended for applications requiring substantial energy storage. Higher-capacity batteries can be used in larger UPS systems, solar backup installations, telecom infrastructure, and industrial applications when their electrical characteristics are compatible with the system.
+</p>
+
+<p>
+    For an industrial installation, battery-bank design should consider UPS voltage, connected load, backup duration, discharge rate, charging system, operating temperature, installation environment, and manufacturer specifications.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    Dry Gel Battery for Solar Systems
+</h2>
+
+<p>
+    Suitable dry gel batteries can also be used for <strong>solar energy storage and backup applications</strong>. A solar battery system should be sized according to energy consumption, solar generation, battery-bank voltage, required backup duration, charging characteristics, and expected depth of discharge.
+</p>
+
+<p>
+    Simply selecting the largest available battery does not necessarily produce the best solar solution. Correct system sizing and compatibility between the battery, inverter, charge controller, and other system components are essential for dependable performance.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    Dry Battery Brands Available from FAST TECH
+</h2>
+
+<p>
+    FAST TECH Engineering Services supplies dry gel batteries from established manufacturers including <strong>LEOCH, VISION, NARADA, and LONG</strong>. The appropriate brand and model depend on the application, required capacity, system voltage, installation conditions, and project requirements.
+</p>
+
+<p>
+    For commercial and industrial customers, FAST TECH can help identify a suitable battery solution based on the existing UPS or power system and required backup performance. You can also explore the complete <a href="../products.html" class="text-primary font-semibold hover:underline">FAST TECH product range</a> for related electrical and power products.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    How to Choose the Right Dry Battery in Pakistan
+</h2>
+
+<p>
+    When choosing a dry battery, start by identifying the equipment that the battery will power. A battery for a small UPS has different requirements from a battery bank for an industrial UPS or solar installation. Determine the required voltage, capacity, and backup duration before comparing products or prices.
+</p>
+
+<p>
+    Battery dimensions and terminal configuration are also important because the replacement battery must physically and electrically fit the existing installation. For commercial and industrial installations, professional assessment is recommended before purchasing or replacing a battery bank.
+</p>
+
+<p>
+    Where voltage fluctuations are also affecting connected equipment, the overall power system may benefit from an appropriately sized <a href="../product-servo-stabilizers.html" class="text-primary font-semibold hover:underline">servo voltage stabilizer</a>. Battery backup and voltage regulation address different power-quality requirements and should be assessed separately.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    Dry Battery vs Other Battery Types
+</h2>
+
+<p>
+    Dry batteries are often selected because they offer a convenient, low-maintenance solution for backup power applications. However, different battery technologies are designed for different operating conditions. Factors such as standby operation, frequent cycling, deep discharge, temperature, installation environment, charging method, and expected service life should all be considered.
+</p>
+
+<p>
+    The cheapest battery is not necessarily the most economical choice over its complete operating life. A suitable battery with the correct specification can provide better reliability and reduce the risk of premature replacement.
+</p>
+
+<p>
+    For technical installations, internationally recognized electrical standards and manufacturer specifications should be considered during equipment selection and system design. The <a href="https://www.iec.ch/" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:underline">International Electrotechnical Commission (IEC)</a> provides international standards and technical resources relevant to electrical and electronic systems.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    Why Dry Battery Price Can Vary in Pakistan
+</h2>
+
+<p>
+    There is no single fixed <strong>dry battery price in Pakistan</strong> because several factors influence the final quotation. Battery capacity is one of the most important factors, while brand, technology, manufacturing quality, warranty, availability, and application can also affect pricing.
+</p>
+
+<p>
+    For commercial and industrial customers, the final cost may also depend on the number of batteries required, battery-bank configuration, delivery requirements, and project specifications. For this reason, customers should request a current quotation based on their exact requirements instead of relying on an outdated price.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    How Many Dry Batteries Does a UPS Need?
+</h2>
+
+<p>
+    The number of batteries required depends on the UPS DC bus voltage and the battery specification. A UPS requiring a higher DC voltage may use multiple batteries connected in series. Additional batteries may then be connected in parallel when greater capacity is required.
+</p>
+
+<p>
+    A system requiring a higher battery-bank voltage cannot simply be supplied with one 12V battery. The complete UPS specification must be considered when determining the battery configuration, required Ah capacity, and expected backup time. FAST TECH can help customers determine the appropriate battery requirement for their UPS application.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    How Long Does a Dry Battery Last?
+</h2>
+
+<p>
+    The service life of a dry battery depends on operating temperature, charging conditions, discharge depth, frequency of use, connected load, installation environment, battery quality, and maintenance practices. A battery used frequently for deep discharge can experience different service-life characteristics from one used primarily for standby backup.
+</p>
+
+<p>
+    Correct charging and operating conditions are important for achieving the expected battery performance. Regular inspection and testing can help identify declining battery performance before a complete failure occurs.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    When Should a UPS Battery Be Replaced?
+</h2>
+
+<p>
+    A UPS battery may require replacement when it no longer provides the expected backup time, shows abnormal performance during testing, fails capacity testing, or reaches the manufacturer's recommended service period. Regular <a href="../service-ups-maintenance.html" class="text-primary font-semibold hover:underline">UPS maintenance services</a> can help identify declining battery performance before a complete failure occurs.
+</p>
+
+<p>
+    When a UPS develops a fault in addition to battery problems, professional <a href="../service-ups-repair.html" class="text-primary font-semibold hover:underline">UPS repair services</a> can help diagnose the underlying electrical or component-level issue.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    Why Choose FAST TECH for Dry Batteries?
+</h2>
+
+<p>
+    FAST TECH Engineering Services is an electrical engineering company in Pakistan established in 2010, providing electrical products and power solutions for commercial, industrial, and infrastructure customers. Our dry gel battery solutions are suitable for UPS, solar, telecom, and industrial applications.
+</p>
+
+<p>
+    FAST TECH works with established battery brands including LEOCH, VISION, NARADA, and LONG and can help businesses select suitable battery capacities according to their UPS system, backup requirements, and application.
+</p>
+
+<p>
+    If you need a <strong>dry battery in Pakistan</strong>, contact FAST TECH Engineering Services for product availability, specifications, and a current quotation.
+</p>
+
+<h2 class="text-2xl md:text-3xl font-bold text-dark pt-6 mt-8 mb-4 border-b border-gray-150 pb-2">
+    Get a Dry Battery Quote from FAST TECH
+</h2>
+
+<p>
+    Choosing the right battery is important for maintaining reliable backup power. Instead of selecting a battery based only on the <strong>dry battery price in Pakistan</strong>, consider capacity, voltage, application, expected backup time, battery technology, warranty, and long-term reliability.
+</p>
+
+<p>
+    FAST TECH Engineering Services can help you identify a suitable dry gel battery for your UPS, solar, telecom, or industrial power system. <a href="../contact.html" class="text-primary font-semibold hover:underline">Contact FAST TECH</a> to discuss your battery requirements and request a quotation.
+</p>
+            </div>
+
+
+            <section class="max-w-3xl mx-auto mt-16 pt-10 border-t border-gray-200">
+                <h2 class="text-2xl font-bold text-dark mb-6">Frequently Asked Questions About Dry Batteries in Pakistan</h2>
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-dark mb-2 text-lg">What is the dry battery price in Pakistan?</h3>
+                        <p class="text-gray-650 text-sm leading-relaxed">Dry battery prices in Pakistan vary according to capacity, voltage, brand, technology, availability, and application. FAST TECH recommends confirming the current price against the required battery specification and quantity.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-dark mb-2 text-lg">Which dry battery is best for UPS in Pakistan?</h3>
+                        <p class="text-gray-650 text-sm leading-relaxed">The best dry battery for a UPS depends on the UPS model, DC voltage, connected load, required backup time, and battery-bank configuration. The battery should match the UPS manufacturer's specifications.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-dark mb-2 text-lg">What is a 12V dry battery used for?</h3>
+                        <p class="text-gray-650 text-sm leading-relaxed">A 12V dry battery can be used in smaller UPS systems, security equipment, telecom equipment, emergency backup systems, and other applications requiring 12V DC energy storage.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-dark mb-2 text-lg">Is a dry gel battery suitable for solar systems?</h3>
+                        <p class="text-gray-650 text-sm leading-relaxed">Suitable dry gel batteries can be used for solar backup and energy-storage applications when the battery voltage, capacity, charging requirements, and operating characteristics match the solar system.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-dark mb-2 text-lg">What is the difference between a dry battery and a gel battery?</h3>
+                        <p class="text-gray-650 text-sm leading-relaxed">Dry battery is commonly used as a broad term for sealed or maintenance-free batteries, while a gel battery specifically uses gelled electrolyte technology. The exact battery construction should be confirmed from the manufacturer's specifications.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-dark mb-2 text-lg">Is a dry battery maintenance-free?</h3>
+                        <p class="text-gray-650 text-sm leading-relaxed">Many sealed dry and gel batteries are designed for low-maintenance or maintenance-free operation under normal conditions. The battery and charging system should still be inspected and tested as part of proper UPS or power-system maintenance.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-dark mb-2 text-lg">How do I choose the correct battery capacity for my UPS?</h3>
+                        <p class="text-gray-650 text-sm leading-relaxed">Battery capacity should be selected according to UPS load, required backup time, system DC voltage, battery technology, and manufacturer specifications. Professional sizing is recommended for commercial and industrial UPS systems.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-dark mb-2 text-lg">Can dry batteries be used for industrial UPS systems?</h3>
+                        <p class="text-gray-650 text-sm leading-relaxed">Yes. Suitable high-capacity dry gel batteries can be used for industrial UPS applications when their voltage, capacity, discharge characteristics, and other specifications are compatible with the UPS system.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-dark mb-2 text-lg">Which dry battery brands does FAST TECH offer?</h3>
+                        <p class="text-gray-650 text-sm leading-relaxed">FAST TECH Engineering Services lists dry gel battery brands including LEOCH, VISION, NARADA, and LONG.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-dark mb-2 text-lg">Where can I buy dry batteries in Pakistan?</h3>
+                        <p class="text-gray-650 text-sm leading-relaxed">Dry batteries can be purchased from specialized electrical and power-equipment suppliers. FAST TECH Engineering Services supplies dry gel batteries for UPS, solar, telecom, and industrial applications and can provide product availability and quotation information.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- B2B Service Call-to-Action (CTA) -->
+            <section class="max-w-3xl mx-auto mt-16 p-8 bg-dark text-white rounded-2xl shadow-xl relative overflow-hidden">
+                <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none transform translate-x-12 translate-y-12">
+                    <i data-lucide="activity" class="w-72 h-72 text-primary"></i>
+                </div>
+                <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
+                    <div class="max-w-md">
+                        <span class="text-primary font-semibold text-sm uppercase tracking-wider">FastTech Support & Services</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-3">Need the Right Dry Battery?</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">FAST TECH supplies dry gel batteries for UPS, solar, telecom, and industrial applications. Contact our team for specifications, availability, and a current quotation.</p>
+                    </div>
+                    <div>
+                        <a href="../../contact.html" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-bold transition-all whitespace-nowrap shadow-lg">
+                            <i data-lucide="phone-call" class="w-4 h-4"></i>
+                            <span>Request a Battery Quote</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Related Articles (Manually managed links) -->
+            <section class="max-w-3xl mx-auto mt-20 pt-10 border-t border-gray-200 related-articles">
+                <h2 class="text-2xl font-bold text-dark mb-6">Related Articles</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 related-grid">
+                    
+                    <!-- Related Article 1 -->
+                    <div class="bg-white rounded-lg border border-gray-200 overflow-hidden flex flex-col hover:border-primary/45 transition-colors">
+                        <a href="how-often-should-an-industrial-ups-be-serviced.html" class="block h-40 overflow-hidden">
+                            <img src="../images/ups-maintenance.jpg" alt="Industrial UPS diagnostic maintenance" class="w-full h-full object-cover">
+                        </a>
+                        <div class="p-4 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-[10px] font-semibold text-primary uppercase">UPS Maintenance</span>
+                                <h4 class="font-bold text-sm text-dark mt-1 hover:text-primary transition-colors">
+                                    <a href="how-often-should-an-industrial-ups-be-serviced.html">How Often Should an Industrial UPS Be Serviced?</a>
+                                </h4>
+                            </div>
+                            <time datetime="2026-08-22" class="text-[10px] text-gray-400 block mt-4">August 22, 2026</time>
+                        </div>
+                    </div>
+                    
+                    <!-- Add more manually updated related articles here -->
+
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-20 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <a href="../../index.html" class="inline-block mb-6">
+                        <img src="../../Logo/fast_logo.png" alt="FAST TECH Logo" class="h-10 w-auto object-contain footer-logo">
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed">Powering Pakistan's industries with reliable energy solutions, electrical contracting, and premium power products since 2010.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="../../index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="../../about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="../../products.html" class="hover:text-primary transition-colors">Products</a></li>
+                        <li><a href="../../services.html" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="../index.html" class="hover:text-primary transition-colors text-primary font-medium">Blog</a></li>
+                        <li><a href="../../contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">Products</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="../../product-online-ups.html" class="hover:text-primary transition-colors">Online UPS</a></li>
+                        <li><a href="../../product-dry-gel-battery.html" class="hover:text-primary transition-colors">Dry Batteries</a></li>
+                        <li><a href="../../product-lithium-batteries.html" class="hover:text-primary transition-colors">Lithium Batteries</a></li>
+                        <li><a href="../../product-lt-ht-overhead.html" class="hover:text-primary transition-colors">LT-HT Materials</a></li>
+                        <li><a href="../../product-din-rail-power.html" class="hover:text-primary transition-colors">DIN Rail Supplies</a></li>
+                        <li><a href="../../product-panel-dbs-cable-trays.html" class="hover:text-primary transition-colors">Panel DBs & Trays</a></li>
+                        <li><a href="../../product-street-lighting.html" class="hover:text-primary transition-colors">Street & Flood Lighting</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">Contact</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"></i>
+                            <span>Lahore, Pakistan</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-primary flex-shrink-0"></i>
+                            <a href="tel:+923224462686" class="hover:text-primary transition-colors">+92 322 4462686</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-primary flex-shrink-0"></i>
+                            <a href="mailto:fastech.eng@gmail.com" class="hover:text-primary transition-colors">fastech.eng@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section-divider mb-8"></div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2026 FAST TECH Engineering Services. All rights reserved.</p>
+                <p>Engineering Excellence Since 2010</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923224462686" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+    </a>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-24 left-1/2 -translate-x-1/2 bg-dark text-white px-6 py-3 rounded-lg shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center gap-3">
+        <i data-lucide="check-circle" class="w-5 h-5 text-primary"></i>
+        <span id="toast-message">Message sent successfully!</span>
+    </div>
+
+    <!-- Script link -->
+    <script src="../../js/main.js" defer></script>
+</body>
+</html>
